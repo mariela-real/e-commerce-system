@@ -1,6 +1,7 @@
 <?php
-
+use App\Http\Controllers\BotManController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/botman', [BotManController::class, 'handle'])->name('botman'); 
+Route::post('/botman', [BotManController::class, 'askName'])->name('botman');
