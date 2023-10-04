@@ -18,7 +18,7 @@
               </label>
               <nav>
                 <ul>
-                  <li><a href="#">Logo</a></li>
+                  <li><a href="#" id="selected"></a></li>
                   <li><a href="#">Acerca de nosotros</a>
                     <ul>
                       <li><a href="">Quienes somos</a></li>
