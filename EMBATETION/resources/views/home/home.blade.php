@@ -1,4 +1,4 @@
-@extends('Navbar.Navbar')
+@extends('navbar.navbar')
 @section('content')
     <div class="container">
         <div>

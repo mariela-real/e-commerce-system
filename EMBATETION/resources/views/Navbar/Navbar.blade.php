@@ -10,8 +10,10 @@
 </head>
 <body>
     <header>
+       <!-- container__ controla todo el menu de la barra de navegacion -->
         <div class="container__menu">
             <div class="menu">
+              <!-- checkbox, check__menu, label__check son para controlar la funcion responsiva de la barra de navegacion-->
               <input type="checkbox" id="check__menu">
               <label  for="check__menu" id="label__check">
                 <i class="fa-solid fa-bars icon__menu"></i>
@@ -28,11 +30,22 @@
                       <li><a href="">Premios y reconocimientos</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">Servicios</a></li>
+                  <li><a href="#">Servicios</a>
+                    <ul>
+                      <li><a href="">Motivación emprendedora</a></li>
+                      <li><a href="">Pre incubación</a></li>
+                      <li><a href="">Incubación</a></li>
+                      <li><a href="">Post incubación</a></li>
+                      <li><a href="">Premios y reconocimientos</a></li>
+                    </ul>
+                  </li>
                   <li><a href="#">Tienda</a></li>
                   <li><a href="#">Aprender</a></li>
                   <li><a href="#">Blog</a></li>
+                  <!-- clase btn y btn-1 para controlar de manera independiente los colores del boton -->
+                  <li><a href="#" class="btn btn-1">Comenzar</a></li>
                 </ul>
+                
               </nav>
 
             </div>
