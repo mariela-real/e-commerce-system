@@ -12,15 +12,33 @@ class SubscriberController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function viewRegistration()
+    public function viewRegistrationSubscripter()
     {
-        $subscribers = Carrera::all();
-        return view('subscriber.subscriber-registration');
+        $subscribers = Subscriber::all();
+        return view('subscriber.subscriber_registration');
     }
 
     /**
      * Show the form for creating a new resource.
      *
+     * @return \Illuminate\Http\Response
+     */
+  
+    public function registerSubscripter(Request $request)
+    {
+        $subscriber = new Subscriber();
+        $subscriber->firstName = $request->firstName;
+        $subscriber->lastName = $request->lastName;
+        $subscriber->email = $request->email;
+        $subscriber->save();
+       
+        return redirect()->route('inicio')->with('register', 'ok');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Subscriber  $subscriber
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -32,23 +50,6 @@ class SubscriberController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function registro(Request $request)
-    {
-        $subscribers = new Materia();
-        $subscribers->firstName = $request->firstName;
-        $subscribers->lastName = $request->lastName;
-        $subscribers->email = $request->email;
-        $subscribers->save();
-       
-        return redirect()->route('subscribers')->with('registrar', 'ok');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Subscriber  $subscriber
      * @return \Illuminate\Http\Response
      */
     public function show(Subscriber $subscriber)
