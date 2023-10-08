@@ -1,6 +1,8 @@
 <?php
-
+use App\Http\Controllers\BotManController;
+use App\Http\Controllers\SubscriberController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('home.home');
-});
+});*/
+Route::get('/inicio', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('inicio');
+Route::post('/inicio', [SubscriberController::class, 'registerSubscripter'])->name('inicio');

@@ -38,4 +38,8 @@
 </html>
 @endsection
 
+@section('form content')
+@extends('subscriber.subscriber_registration')
+
+@endsection
 
