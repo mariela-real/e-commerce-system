@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HOME</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="{{asset('css/home.css')}}">
 </head>
 <body>
@@ -38,8 +38,4 @@
 </html>
 @endsection
 
-@section('form content')
-@extends('subscriber.subscriber_registration')
-
-@endsection
 

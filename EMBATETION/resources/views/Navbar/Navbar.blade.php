@@ -8,7 +8,7 @@
     
     <script src="https://kit.fontawesome.com/13fe1b16d3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{asset('css/navbar.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/form.css')}}" />
+  
 
 </head>
 
@@ -63,9 +63,6 @@
     @yield('Form content')
   </div>
 
-      <main class="py-4">
-         @yield('content')
-      </main>
 
       @include('footer.footer')
 </body>
