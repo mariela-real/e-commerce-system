@@ -1,18 +1,23 @@
 body{
     margin: 0;
+    z-index: 1;
 }
 .content{
     background-color: aqua;
     margin: 100px auto auto auto;
+    z-index: 1;
 }
 .swiper {
     width: 100%;
-    
+    position: relative;
+    z-index: 1;
+    display: flex
   }
 img{
     height: 510px;
     width: 100%;
     object-fit: cover;
+    z-index: 1;
 }
 
 .swiper-button-prev{  
@@ -63,6 +68,7 @@ img{
         width: 100%;
         object-fit: cover;
     }
+    
 }
 
 .swiper-pagination{
