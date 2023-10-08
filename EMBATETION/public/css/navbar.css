@@ -73,16 +73,16 @@ nav > ul > li > a:hover{
 
 
 nav > ul > li:first-child > a{
-    background-image: url(../img/logomodificado.jpg);
-    background-size: 40px;
+    background-image: url(../img/OSOS_LOGO_1.png);
+    background-size: 80px;
     background-repeat: no-repeat;
     background-position: center center;
     padding: 20px 40px;
 }
 
 nav > ul > li:first-child:hover > a{
-    background-image: url(../img/logomodificado.jpg);
-    background-size: 40px;
+    background-image: url(../img/OSOS_LOGO_1.png);
+    background-size: 80px;
     background-repeat: no-repeat;
     background-position: center center;
 }
