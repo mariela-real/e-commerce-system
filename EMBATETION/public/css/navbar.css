@@ -16,10 +16,10 @@ header{
 }
 .container__menu{
     width: 100%;
-    height: 70px;
+    height: 100px;
     background: rgb(255, 255, 255);
     padding: 0px 0px;
-    
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
 .menu{
@@ -31,7 +31,7 @@ header{
 
 nav{
     height: 100%;
-    
+    z-index: 100;
 }
 
 nav > ul{
@@ -46,9 +46,10 @@ nav  ul  li{
     height: 100%;
     list-style: none;
     position: relative;
-    
-    background-color: rgb(221, 225, 234);
+   
+    background-color: rgb(221, 225, 234);   
     display: inline;
+    
 }
 
 nav > ul > li > a{
@@ -56,11 +57,17 @@ nav > ul > li > a{
     height: 100%;
     display: flex;
     align-items: center;
+    text-decoration: none;
     padding: 14px;
     color: rgb(33, 117, 155);
-    font-size: 20px;
+    font-size: 25px;
     transition: all 300ms ease;
     background-color: rgb(255, 255, 255);
+    
+}
+
+#item{
+    text-align: center;
 }
 
 nav > ul > li > a:hover{
@@ -153,7 +160,7 @@ nav ul li ul li a:hover{
 
 .icon__menu{
     font-size: 26px;
-    color: rgb(255, 255, 255);
+    color: rgb(3, 3, 3);
     cursor: pointer;
     width:  26px;
     height: 100%;
@@ -187,8 +194,13 @@ nav ul li ul li a:hover{
         visibility: hidden;
     }
 
+    nav > ul > li{
+        width: 100%;
+    }
+
     nav > ul > li > a:hover{
         transform: scale(1);
+        
     }
     nav ul li ul{
         left: 90px;
