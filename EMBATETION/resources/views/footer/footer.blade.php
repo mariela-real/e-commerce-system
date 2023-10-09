@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 </head>
 
-<body>
-
+<footer>
     <div class="content__footer">
         <div class="content__info">
             <h1>Únete a nuestra comunidad</h1>
@@ -52,7 +51,7 @@
     @if (session('register')=='ok')
     <script>
       Swal.fire({
-      position: 'fixed',
+      position: 'top-end',
       icon: 'success',
       title: 'Subscripción añadida',
       showConfirmButton: false,
@@ -60,6 +59,6 @@
     })
     </script>
     @endif
-</body>
+</footer>
 
 </html>

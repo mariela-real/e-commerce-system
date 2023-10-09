@@ -18,18 +18,20 @@
     color: white;
     display: flex;
     flex-direction: row;
+    background: black;
 }
 
 .content__info{
     height: 100%;
     width: 600px;
     margin-top: 18px;
+    background: black;
 }
 
 .input__list{
     display: flex;
     flex-direction: row;
-    
+    background-color: black;
 }
 
 .input__item{
