@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home.home');
 });
-Route::get('/inicio', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('inicio');
-Route::post('/inicio', [SubscriberController::class, 'registerSubscripter'])->name('inicio');
+Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
+Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');

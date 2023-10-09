@@ -1,5 +1,4 @@
 @extends('navbar.navbar')
-
 @section('content')
 <head>
 	<meta charset="UTF-8">
@@ -37,5 +36,6 @@
 </body>
 </html>
 @endsection
+
 
 

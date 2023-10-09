@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\SubscriberRequest;
 class SubscriberController extends Controller
 {
     /**
@@ -15,7 +15,7 @@ class SubscriberController extends Controller
     public function viewRegistrationSubscripter()
     {
         $subscribers = Subscriber::all();
-        return view('subscriber.subscriber_registration');
+        return view('home.home');
     }
 
     /**
@@ -24,7 +24,7 @@ class SubscriberController extends Controller
      * @return \Illuminate\Http\Response
      */
   
-    public function registerSubscripter(Request $request)
+    public function registerSubscripter(SubscriberRequest $request)
     {
         $subscriber = new Subscriber();
         $subscriber->firstName = $request->firstName;
@@ -32,7 +32,7 @@ class SubscriberController extends Controller
         $subscriber->email = $request->email;
         $subscriber->save();
        
-        return redirect()->route('inicio')->with('register', 'ok');
+        return redirect()->route('home')->with('register', 'ok');
     }
 
     /**
