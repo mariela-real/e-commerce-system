@@ -23,10 +23,10 @@
               <nav>
                 <ul>
                   <li><a href="#" id="selected"></a></li>
-                  <li><a href="/inicio">Inicio</a>
+                  <li><a href="/">Inicio</a>
                   <li><a href="#">Acerca de nosotros</a>
                     <ul>
-                      <li><a href="">Quienes somos</a></li>
+                      <li><a href="/about">Quienes somos</a></li>
                       <li><a href="">Nuestro equipo</a></li>
                       <li><a href="">Como trabajamos</a></li>
                       <li><a href="">Mision, Vision y valores</a></li>
@@ -64,6 +64,6 @@
   </div>
 
 
-      @include('footer.footer')
+     
 </body>
 </html>

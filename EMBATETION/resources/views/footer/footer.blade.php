@@ -7,7 +7,8 @@
     <title></title>
     <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 </head>
-<body>
+
+<footer>
     
 
     <div class="content__footer">
@@ -36,5 +37,5 @@
         
     </div>
     
-</body>
+</footer>
 </html>
