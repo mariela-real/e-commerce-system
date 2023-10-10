@@ -21,9 +21,14 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about.about');
 });
+
 Route::get('/advice', function () {
     return view('advice.advice');
 });
 
 Route::get('/inicio', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('inicio');
 Route::post('/inicio', [SubscriberController::class, 'registerSubscripter'])->name('inicio');
+
+Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
+Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
+
