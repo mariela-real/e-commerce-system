@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{asset('css/advice.css')}}">
 </head>
 <body>
+    <!-- clase content__advice controla toda la pagina de asesoramiento y advice__start el mensaje de bienvenida -->
     <div class="content__advice">
         <div class="advice__start">
             <h2>
@@ -27,6 +28,7 @@
                 Puede postularse para iniciar un nuevo capítulo y comenzar a emprender en grande.
             </h4>
         </div>
+        <!-- clase advice__steps controla los pasos para la solicitud -->
         <div class="advice__steps">
             <h3>
                 Proceso de solicitud de 3 pasos 
@@ -43,6 +45,7 @@
                 una entrevista 
             </h4>
         </div>
+        <!-- button__send controla el boton para enviar la solicitud -->
         <button type="submit" class="button__send">Envie su solicitud</a> 
     </div>
 </body>

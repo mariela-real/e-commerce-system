@@ -14,10 +14,13 @@
 
 <body>
   <header>
+    <!-- containner__controla todo el navbar -->
          <div class="container__menu">
             <div class="menu">
+              <!-- clase checkbox para diseñor responsivo y click mediante un icono -->
               <input type="checkbox" id="check__menu">
               <label  for="check__menu" id="label__check">
+                <!-- clase para controlar estilos del icono -->
                 <i class="fa-solid fa-bars icon__menu"></i>
               </label>
               <nav>

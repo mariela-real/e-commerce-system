@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset('css/about.css')}}">
 </head>
 <body>
+    <!-- conten__about controla toda la pagina acerca de, y clase text controla todo el texto de informacion-->
     <div class="content__about">
         <div class="text">
             <p>
@@ -39,7 +40,7 @@
                 garantizar la transparencia y responsabilidad.
             </p>
         </div>
-        
+        <!-- about__logo controla el logo de la pargina acerca de -->
         <div class="about__logo">
             <img src="{{asset('img/logomodificado.jpg')}}" alt="">
         </div>
