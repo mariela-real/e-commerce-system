@@ -93,3 +93,58 @@
         margin-left: 50px;
     }
 }
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.left{
+    background: #ffffff;
+    height: 200vh;
+
+}
+.right{
+    background: #201f1f;
+    width: 30%;
+    height: 200vh;
+}
+#split-screen{
+    display: flex;
+}
+.creative{
+    color:#ffffff;
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.5rem;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-left: 10.7rem;
+    margin-right: 5rem;
+    margin-top: 10rem;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    margin-top: 8rem;
+}
+p{
+    color: rgb(0, 0, 0);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: auto;
+    margin-left: 10.7rem;
+    margin-right: 15rem;
+}
+.to-line-up{
+    margin-left: 5rem;
+}

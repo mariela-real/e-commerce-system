@@ -9,12 +9,7 @@
 </head>
 
 <footer>
-
-    
-    <!-- clase content__footer para controlar todo el footer -->
-
     <div class="content__footer">
-        <!-- clase content__info para controlar estilos de informacion de footer -->
         <div class="content__info">
             <h1>Únete a nuestra comunidad</h1>
             <p>Obtenga las ultimas noticias, recursos para nuevas empresas, descuentos y mas</p>
@@ -49,7 +44,6 @@
                 <button type="submit" class="button__start">UNIRME</a>  
                 </div> 
             </div>
-            
        </form>
     </div>
     <script src="{{asset('js/app.js')}}"></script>

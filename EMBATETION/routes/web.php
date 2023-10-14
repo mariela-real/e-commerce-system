@@ -1,6 +1,6 @@
 <?php
-use App\Http\Controllers\BotManController;
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\AdviceRequestsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -25,10 +25,6 @@ Route::get('/about', function () {
 Route::get('/advice', function () {
     return view('advice.advice');
 });
-
-Route::get('/inicio', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('inicio');
-Route::post('/inicio', [SubscriberController::class, 'registerSubscripter'])->name('inicio');
-
 Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
 Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
-
+Route::post('/advice', [AdviceRequestsController::class, 'sendScheduleAdvice'])->name('advice');
