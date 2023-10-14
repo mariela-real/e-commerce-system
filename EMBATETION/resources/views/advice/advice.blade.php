@@ -11,6 +11,7 @@
 <body>
 <section id="split-screen">
         <div class="left">
+           <img src="img/OSOS_LOGO_1.png" />
             <h1>Contáctenos para comenzar su viaje empresarial</h1>
             <p> 
             Felicitaciones por dar el primer paso para unirte a nuestra increíble organización. 

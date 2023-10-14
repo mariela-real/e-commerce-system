@@ -27,9 +27,9 @@ class AdviceRequest extends FormRequest
         [
             'firstName'=>'required|min:3|max:25',
             'lastName'=>'required|min:3|max:25',
-            'email'=>'required|string|email|max:255|unique:subscribers',
-            'cell_phone_number'=>'required|max:20',
-            'message'=>'required|max:255'
+            'email'=>'required|string|email|max:30',
+            'cell_phone_number'=>'required|min:7|max:20',
+            'message'=>'required|max:400'
         ];
     }
 }
