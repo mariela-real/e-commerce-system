@@ -22,6 +22,11 @@ Route::get('/about', function () {
     return view('about.about');
 });
 
+Route::get('/motivation', function () {
+    return view('motivation.motivation');
+});
+
+
 Route::get('/advice', function () {
     return view('advice.advice');
 });
