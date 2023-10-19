@@ -27,7 +27,7 @@ class SubscriberRequest extends FormRequest
         [
             'firstName'=>'required|min:3|max:25',
             'lastName'=>'required|min:3|max:25',
-            'email'=>'required|string|email|max:255|unique:subscribers'
+            'email'=>'required|string|email|max:50|unique:subscribers'
         ];
 
       /*  if($this->method() !== 'PUT')

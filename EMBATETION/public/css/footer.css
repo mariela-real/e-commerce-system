@@ -31,8 +31,10 @@
 .input__list{
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: black;
 }
+
 
 .input__item{
     position: relative;
@@ -124,13 +126,13 @@ span{
         text-align: center;
     }
     .input__list{
-        margin: 5px 0;
+       flex-direction: column;
     }
 
     .button__start{   
-        width: 100%;
+        width: 200px;
         height: 50px;
-        margin-left: 0;
+        margin-left: 0px;
         margin-top: 5px;
         margin-bottom: 5px;
     }
