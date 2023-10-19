@@ -33,7 +33,7 @@
 </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="{{asset('js/home.js')}}"></script>
-  @include('footer.footer')
+  @include('subscriber.subscriber_registration')
 </body>
 </html>
 @endsection

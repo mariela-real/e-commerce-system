@@ -25,6 +25,10 @@ Route::get('/about', function () {
 Route::get('/advice', function () {
     return view('advice.advice');
 });
+Route::get('/request_tray', function () {
+    return view('advice.request_tray');
+});
 Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
 Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
 Route::post('/advice', [AdviceRequestsController::class, 'sendScheduleAdvice'])->name('advice');
+

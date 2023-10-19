@@ -40,12 +40,10 @@
                       <li><a href="">Pre incubación</a></li>
                       <li><a href="">Incubación</a></li>
                       <li><a href="">Post incubación</a></li>
-                      <li><a href="">Premios y reconocimientos</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Tienda</a></li>
                   <li><a href="/advice">Aprender</a></li>
-                  <li><a href="#">Blog</a></li>
                   <li><a href="#" class="btn btn-1">Iniciar Sesión</a></li>
                 </ul>
               </nav>
