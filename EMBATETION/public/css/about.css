@@ -15,10 +15,10 @@
 }
 
 .content__about .about__logo img{
-    position: absolute;
+   
    width: 100px;
    height: 120px;
-   margin-top: 400px;
+   margin-top: 330px;
    transform: translateX(-300px);
    
 }
@@ -35,10 +35,11 @@
     }
 
     .content__about .about__logo img{
+      
         margin-top: 0px;
         transform: translateX(0%);
         margin-left: 45%;
-        position: absolute;
+        position: none;
        
        
     }

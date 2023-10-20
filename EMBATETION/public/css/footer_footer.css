@@ -6,7 +6,7 @@
 
 .content_footer{
     background-color: black;
-    margin-top: 50px;
+    
     
     width: 100%;
     height: 100%;
@@ -72,7 +72,7 @@
 @media (max-width: 1210px){
     .content_footer{
   
-        margin-top: 150px;
+        margin-top: 50px;
 
     }
     .content_footer .footer_contact .contact_info{

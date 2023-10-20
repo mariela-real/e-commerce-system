@@ -1,0 +1,47 @@
+.content__team {
+    background-image: linear-gradient(to bottom, #000000, #ffffff);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+.content__team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content__team .team__logo img{
+
+    width: 80%;
+    padding-left: 15%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    align-items: center;
+    
+   
+}
+
+.content__team .text{
+    padding-top: 100px;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+
+.content__team h1{
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 565px){
+    .content__team h1{
+        font-size: 25px;
+    }
+    
+}
