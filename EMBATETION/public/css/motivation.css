@@ -1,0 +1,76 @@
+
+
+.content__motivation{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+
+.content__motivation .text{
+    padding: 100px 350px 80px 350px;
+    text-align: justify;
+    position: relative;
+    
+}
+
+.content__motivation p{
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.content__motivation .motivation__logo img{
+    position: absolute;
+   width: 80px;
+   height: 80px;
+   margin-top: 70px;
+   transform: translateX(200px);
+   
+}
+
+@media (max-width: 1210px){
+    .content__motivation{
+        flex-direction: column;
+    }
+    .content__motivation .motivation__logo img{
+        position: absolute;
+       transform: translateX(0);
+       margin-top: 20px;
+  
+        margin-left: 45%;
+        position: absolute;
+       
+    }
+
+    .content__motivation .text{
+        padding: 200px 350px 0px 350px;
+
+        
+    }
+}
+
+@media (max-width: 940px){
+
+    .content__motivation .motivation__logo img{
+
+       margin-top: 40px;
+
+    }
+
+    .content__motivation .text{
+        padding: 200px 250px 0px 250px;
+
+        
+    }
+}
+
+@media (max-width: 800px){
+
+
+    .content__motivation .text{
+        padding: 200px 100px 0px 100px;
+
+        
+    }
+}

@@ -3,6 +3,8 @@
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
+    text-align: center;
+    margin: 10px;
 }
 #tipos{
     width: 20%;
@@ -139,4 +141,26 @@ background-color:#BABABA;
   .accordion-button{
       font-size: 12px;
   }
+}
+
+
+/* estilos jp*/
+
+.tipo_m:hover{
+    background-color: rgb(56, 181, 190);
+    transition: all 300ms ease;
+}
+
+.navbar__messages{
+    width: 100%;
+    height: 120px;
+}
+
+.navbar__messages h3{
+    padding-left: 150px;
+
+}
+
+#Container{
+    margin-top: 50px;
 }

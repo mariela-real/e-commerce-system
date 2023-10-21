@@ -28,15 +28,15 @@
                   <li><a href="#">Acerca de nosotros</a>
                     <ul>
                       <li><a href="/about">Quienes somos</a></li>
-                      <li><a href="">Nuestro equipo</a></li>
+                      <li><a href="/team">Nuestro equipo</a></li>
                       <li><a href="">Como trabajamos</a></li>
-                      <li><a href="">Mision, Vision y valores</a></li>
+                      <li><a href="/mission">Mision, Vision y valores</a></li>
                       <li><a href="">Premios y reconocimientos</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Procesos</a>
                     <ul>
-                      <li><a href="">Motivación emprendedora</a></li>
+                      <li><a href="/motivation">Motivación emprendedora</a></li>
                       <li><a href="">Pre incubación</a></li>
                       <li><a href="">Incubación</a></li>
                       <li><a href="">Post incubación</a></li>

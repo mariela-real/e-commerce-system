@@ -16,12 +16,12 @@
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
+ 
 <body>
 
 
   <header>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light navbar__messages">
       <div class="container-fluid">
         <h3>Bandeja de solicitudes </h3>
         <a href="#" class="material-symbols-outlined" id="menu">menu</a>
