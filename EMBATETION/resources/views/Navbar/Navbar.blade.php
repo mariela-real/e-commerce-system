@@ -31,7 +31,6 @@
                       <li><a href="">Nuestro equipo</a></li>
                       <li><a href="">Como trabajamos</a></li>
                       <li><a href="">Mision, Vision y valores</a></li>
-                      <li><a href="">Premios y reconocimientos</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Procesos</a>
