@@ -1,0 +1,78 @@
+.content__preIncubation{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    background: linear-gradient(to bottom, rgb(226, 226, 226), #ffffff);
+    color: #000000;
+    justify-content: space-between;
+    padding: 0px 50px 50px 50px;
+    height: 100%;
+}
+
+.line{
+    width: 51px; 
+    height: 5px; 
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+}
+
+.content__preIncubation .preIncubation__logo img{
+    width: 100%;
+    height: 500px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.preIncubation_title{
+    margin-top: 150px;
+    width: 40%;
+    padding-left: 80px;
+}
+
+.content__preIncubation .preIncubation_title p{
+    font-weight: bold;
+    padding-top: 30px;
+    text-align: justify;
+}
+
+@media (max-width: 1000px){
+    .content__preIncubation{
+
+        flex-direction: column;
+        
+    }
+    .preIncubation_title{
+       
+        width: 100%;
+        padding-left: 0px;
+    }
+    
+    .content__preIncubation .preIncubation__logo img{
+
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 682px){
+    .content__preIncubation .preIncubation__logo img{
+
+        height: 400px;
+
+    }
+}
+
+@media (max-width: 405px){
+    .content__preIncubation .preIncubation__logo img{
+
+        height: 300px;
+
+    }
+}
+
+
+@media (max-width: 259px){
+    .content__preIncubation .preIncubation__logo img{
+
+        height: 200px;
+
+    }
+}
