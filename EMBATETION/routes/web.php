@@ -26,6 +26,15 @@ Route::get('/motivation', function () {
     return view('motivation.motivation');
 });
 
+Route::get('/mission', function () {
+    return view('mission_vision.mission_vision');
+});
+
+Route::get('/team', function () {
+    return view('team.team');
+});
+
+
 
 Route::get('/advice', function () {
     return view('advice.advice');
