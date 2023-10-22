@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AdviceRequest extends FormRequest
+class RequestServiceRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -29,7 +29,11 @@ class AdviceRequest extends FormRequest
             'lastName'=>'required|min:3|max:25',
             'email'=>'required|string|email|max:30',
             'cell_phone_number'=>'required|min:7|max:20',
-            'message'=>'required|max:400'
+            'subject'=>'required',
+            'message'=>'max:400',
+            'g-recaptcha-response' => 'required|captcha'
         ];
+
     }
+
 }

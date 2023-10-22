@@ -1,6 +1,6 @@
 <?php
 use App\Http\Controllers\SubscriberController;
-use App\Http\Controllers\AdviceRequestsController;
+use App\Http\Controllers\ServiceRequestsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -39,13 +39,13 @@ Route::get('/pre_incubation', function () {
 });
 
 
-Route::get('/advice', function () {
-    return view('advice.advice');
+Route::get('/service', function () {
+    return view('contact.advice');
 });
 Route::get('/request_tray', function () {
     return view('advice.request_tray');
 });
 Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
 Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
-Route::post('/advice', [AdviceRequestsController::class, 'sendScheduleAdvice'])->name('advice');
+Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
 
