@@ -33,6 +33,10 @@ Route::get('/mission', function () {
 Route::get('/team', function () {
     return view('team.team');
 });
+Route::get('/work', function () {
+    return view('work.work');
+});
+
 
 Route::get('/pre_incubation', function () {
     return view('pre_incubation.pre_incubation');
