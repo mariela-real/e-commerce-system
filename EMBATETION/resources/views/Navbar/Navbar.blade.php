@@ -29,7 +29,7 @@
                     <ul>
                       <li><a href="/about">Quienes somos</a></li>
                       <li><a href="/team">Nuestro equipo</a></li>
-                      <li><a href="">Como trabajamos</a></li>
+                      <li><a href="/work">Como trabajamos</a></li>
                       <li><a href="/mission">Mision, Vision y valores</a></li>
                     </ul>
                   </li>
