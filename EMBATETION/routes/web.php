@@ -34,6 +34,9 @@ Route::get('/team', function () {
     return view('team.team');
 });
 
+Route::get('/pre_incubation', function () {
+    return view('pre_incubation.pre_incubation');
+});
 
 
 Route::get('/advice', function () {
