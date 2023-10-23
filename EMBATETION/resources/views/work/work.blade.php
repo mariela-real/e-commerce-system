@@ -81,19 +81,11 @@
                   </div>
               </div>
         </div>
-          
-       
 
-        
-        
     </div>
         
     <script type="text/javascript" src="{{asset('js/work.js')}}"></script>
-    @include('footer.footer')
 </body>
 
-
-
-   
 </html>
 @endsection

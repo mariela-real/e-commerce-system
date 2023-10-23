@@ -31,7 +31,7 @@ class RequestServiceRequest extends FormRequest
             'cell_phone_number'=>'required|min:7|max:20',
             'subject'=>'required',
             'message'=>'max:400',
-            'g-recaptcha-response' => 'required|captcha'
+            'g-recaptcha-response'=>'required',
         ];
 
     }

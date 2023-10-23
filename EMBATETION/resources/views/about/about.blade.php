@@ -45,7 +45,6 @@
             <img src="{{asset('img/logomodificado.jpg')}}" alt="">
         </div>
     </div>
-    @include('footer.footer')
 </body>
 
 

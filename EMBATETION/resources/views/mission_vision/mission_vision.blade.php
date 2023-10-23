@@ -118,11 +118,6 @@
         </div>
                 
     </div>
-    @include('footer.footer')
 </body>
-
-
-
-   
 </html>
 @endsection

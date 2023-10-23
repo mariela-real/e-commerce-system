@@ -5,6 +5,7 @@
       <link rel="stylesheet" href="{{asset('css/form.css')}}">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      
    </head>
    <body>
     <div class="container">
@@ -42,13 +43,11 @@
             @if ($errors->has('message'))
                   <span class="text-danger">{{ $errors->first('message') }}</span>
             @endif
-            <div class="g-recaptcha" data-sitekey="6LcwIsAoAAAAAFyDlkrfyPpQhQda43Tt4oyr1Mpo"></div>
-            <br>
-            @if ($errors->has('g-recaptcha-response'))
-            <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
-            @endif
-            <input type="submit" name="enviar" value="Enviar datos"/>
-
+            <div class="g-recaptcha" data-sitekey="6Lcz_sMoAAAAAKlWj_K7PTb4AHeFUwI7fxJvFdZG"></div>
+            @error('g-recaptcha-response')
+            <span class="text-danger">{{ $message }}</span>
+            @enderror
+            <input type="submit" value="Enviar datos"/>
          </form>
      </div>
      <script type="text/javascript" src="{{asset('js/form.js')}}"></script>

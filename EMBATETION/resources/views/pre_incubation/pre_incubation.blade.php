@@ -33,12 +33,7 @@
                 
         </div>
         
-       
-
-        
-        
     </div>
-    @include('footer.footer')
 </body>
 
 

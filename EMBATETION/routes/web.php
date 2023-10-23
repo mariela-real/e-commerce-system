@@ -46,10 +46,11 @@ Route::get('/pre_incubation', function () {
 Route::get('/service', function () {
     return view('contact.advice');
 });
-Route::get('/request_tray', function () {
-    return view('advice.request_tray');
+Route::get('/inbox', function () {
+    return view('inbox.request_tray');
 });
 Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
 Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
 Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
-
+Route::get('/admin-response', [ServiceRequestsController::class, 'messageReport'])->name('admin-response');
+//Route::get('/respuesta/{id}', [reservaController::class, 'show'])->name('respuesta');

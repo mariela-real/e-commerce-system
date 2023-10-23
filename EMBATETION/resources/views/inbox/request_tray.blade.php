@@ -11,24 +11,20 @@
   </script>
   <link rel="stylesheet" href="{{asset('css/message_box.css')}}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
- 
 <body>
-
-
   <header>
     <nav class="navbar navbar-light bg-light navbar__messages">
       <div class="container-fluid">
         <h3>Bandeja de solicitudes </h3>
-        <a href="#" class="material-symbols-outlined" id="menu">menu</a>
         <form class="d-flex">
-            <a href="respuestaAdmin"><span class="material-symbols-outlined" id="campana">
+            <a href="admin-response">
+              <span class="material-symbols-outlined" id="campana">
                 notifications
-                </span></a>
+              </span>
+          </a>
         </form>
       </div>
     </nav>
@@ -36,9 +32,8 @@
     <div id="Container" class="container-fluid">
             <div id="tipos">
               
-            <span class="tipo_m" id="llegada">Por llegada</span>
-            <span class="tipo_m" id="urgencia">Por urgencia</span>
-
+            <span class="tipo_m" id="llegada">Recibidos</span>
+            <span class="tipo_m" id="urgencia">Enviados</span>
 
            </div>
         <div id="tabla">
@@ -46,16 +41,21 @@
                 <thead>
                     <th>Nombre</th>
                     <th>Asunto</th>
-                    <th>Estado</th>
                     <th>Fecha de llegada</th>
 
                 </thead>
+                <tbody>
+                @foreach($show_messages as $show_message)
+                <tr>
+                  <td>{{$show_message->firstName . ' ' . $show_message->lastName}}</td>
+                  <td>{{$show_message->subject}}</td>
+                  <td>{{$show_message->created_at}}</td>
+              </tr> 
+              @endforeach
+                </tbody>
             </table>
         </div>
     </div>
-
-  <footer>
-  </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   @yield('js')
   <script>
@@ -89,17 +89,6 @@
  var urgencia=document.getElementById("urgencia")
  llegada.style.background="grey" 
 </script>
-
-@if (session('actualizar')=='ok')
-  <script>localStorage.setItem('ruta',"")
-  Swal.fire({
-    position: 'center',
-    icon: 'success',
-    title: 'Respuesta enviada exitosamente',
-    showConfirmButton: false,
-    timer: 1500
-    })</script>
-@endif
 </body>
 
 </html>

@@ -21,6 +21,7 @@ class CreateServiceRequestsTable extends Migration
             $table->string('cell_phone_number');
             $table->string('subject');
             $table->text('message')->nullable();
+            $table->string("state");
             $table->timestamps();
         });
     }

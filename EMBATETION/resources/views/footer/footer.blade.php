@@ -22,37 +22,40 @@
             <!-- contact_info  controla los texto de contacto y direccion-->
             <div class="contact_info">
                 <h4>
-                    Contacto
+                Oficina principal
                 </h4>
                 <p>
-                    8383 wilshire Blvd #800,Beverly Hills, California 90211, USA
+                Calle Jordan &, Av Oquendo, Cochabamba, Bolivia
                 </p>
             </div>
           <!-- contact_icons logo ce encarga de los iconos y cada icono tiene asignada la clase icon__menu para q todos tengan las mismas propiedades-->
             <div class="contact_icons">
-                <i class="fa-brands fa-instagram icon__menu"></i>
-                <i class="fa-brands fa-tiktok icon__menu"></i>
-                <i class="fa-brands fa-twitter icon__menu"></i>
-                <i class="fa-brands fa-youtube icon__menu"></i>
+                <a href="https://www.facebook.com/profile.php?id=100064455141674">
                 <i class="fa-brands fa-facebook icon__menu"></i>
-                <i class="fa-brands fa-linkedin icon__menu"></i>
+                </a>
+                <a href="">
+                <i class="fa-brands fa-instagram icon__menu"></i>
+                </a>
+                <a href="">
+                <i class="fa-brands fa-tiktok icon__menu"></i>
+                </a>
+                
             </div>
         </div>
         <!-- footer_contact_2  controla el texto 2-->
 
         <div class="footer_contact_2">
             <h3>
-                Powered by Embate
+            Desarrollado por EMBATE
             </h3>
         </div>
          <!-- footer_copyright  y icon__coyright se encargan del logo y del texto de derechos reservados-->
         <div class="footer_copyright">
             <i class="fa-regular fa-copyright icon__coyright"></i>
             <h2>
-                2023 Embate | All Rights Reserved
+                2023 EMBATE | All Rights Reserved
             </h2>
         </div>
     </div>
-    
 </footer>
 </html>
