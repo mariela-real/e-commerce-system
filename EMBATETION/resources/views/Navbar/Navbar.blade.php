@@ -37,8 +37,8 @@
                     <ul>
                       <li><a href="/motivation">Motivación emprendedora</a></li>
                       <li><a href="/pre_incubation">Pre incubación</a></li>
-                      <li><a href="">Incubación</a></li>
-                      <li><a href="">Post incubación</a></li>
+                      <li><a href="/incubation">Incubación</a></li>
+                      <li><a href="/post_incubation">Post incubación</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Tienda</a></li>

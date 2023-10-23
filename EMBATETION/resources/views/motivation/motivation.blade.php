@@ -185,63 +185,7 @@
       </div>
     </div>
 
-    <div class="text_dinamic">
-        <div class="items">
-            <div class="item">
-                <h3>Campamento de planes de negocio</h3>
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div class="item">
-                <h3>Convocatoria a pre incubación</h3>
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div class="item">
-                <h3>Proceso de pre selección</h3>
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div class="item">
-                <h3>Tutorías iniciales</h3>
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div class="item">
-                <h3>Primera evaluación</h3>
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            
-        </div>
-        
-        
-        <div class="textos">
-            <div class="texto">Los campamentos de planes de
-                negocio presenta los emprendedores la posibilidad de conocer
-                herramientas, metodologías que enseñen a fortalecer el conocimiento
-                de la elaboración de planes de negocios adecuados para su
-                emprendimiento.</div>
-            <div class="texto">La incubadora de empresas de base
-                tecnológica EMBATE lanza las convocatorias públicas.</div>
-            <div class="texto">El proceso de pre selección de los proyectos
-                busca realizar la primera depuración de los proyectos, este proceso no
-                limita el numero de seleccionados.</div>
-            <div class="texto">Las tutorías iniciales son los primeros apoyos que se
-                brinda de manera directa de la incubadora a los emprendedores
-                preseleccionados. En estas tutorías se debe realizar un acta de
-                recomendaciones al proyecto.</div>
-            <div class="texto">La primera evaluación se la realiza de manera mas
-                especifica con la participación de tribunales y unidades académicas de
-                la facultad de ciencias y tecnología que podrían tener interés en
-                incubar al emprendedor.<br>
-                Para realizar esta evaluación se mandarán cartas a estas unidades
-                indicando hora y lugar de la presentación, consistiendo en 2 tiempos:<br>
-                1.- El emprendedor tendrá 15 min para realizar su exposición.<br>
-                2.- El emprendedor tendrá 20 min para responder las consultas del
-                tribunal .<br>
-                El tribunal es responsable de la segunda depuración.<br>
-                Se programará una reunión técnica especifica con las unidades
-                interesadas en apoyar el proceso de incubación.
-                </div>
-        </div>
-    </div>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="{{asset('js/motivation.js')}}"></script>
 </body>

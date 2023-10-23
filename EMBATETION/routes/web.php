@@ -42,6 +42,13 @@ Route::get('/pre_incubation', function () {
     return view('pre_incubation.pre_incubation');
 });
 
+Route::get('/incubation', function () {
+    return view('incubation.incubation');
+});
+
+Route::get('/post_incubation', function () {
+    return view('post_incubation.post_incubation');
+});
 
 Route::get('/service', function () {
     return view('contact.advice');
