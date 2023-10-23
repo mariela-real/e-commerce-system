@@ -94,3 +94,66 @@
         
     }
 }
+
+/* VALORES */
+
+.content__mission{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+
+.content__values .values_title{
+    padding: 10px 0px 0px 80px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.values_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.values_item{
+   
+    padding: 40px;
+    text-align: center;
+}
+
+.values_item img{
+    width: 100px;
+    height: 100px;
+}
+
+.values_item h1{
+    color: rgb(56, 181, 190); 
+    padding-bottom: 40px;
+    font-size: 40px;
+}
+
+.values_item p{
+    text-align: justify;
+    font-weight: bold;
+}
+
+@media (max-width: 922px){
+    .values_list{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 473px){
+    .values_item h1{
+        font-size: 8vw;
+    }
+    
+    .values_list{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

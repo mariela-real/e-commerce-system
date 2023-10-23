@@ -29,21 +29,20 @@
                     <ul>
                       <li><a href="/about">Quienes somos</a></li>
                       <li><a href="/team">Nuestro equipo</a></li>
-                      <li><a href="">Como trabajamos</a></li>
+                      <li><a href="/work">Como trabajamos</a></li>
                       <li><a href="/mission">Mision, Vision y valores</a></li>
-                      <li><a href="">Premios y reconocimientos</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Procesos</a>
                     <ul>
                       <li><a href="/motivation">Motivación emprendedora</a></li>
-                      <li><a href="">Pre incubación</a></li>
-                      <li><a href="">Incubación</a></li>
-                      <li><a href="">Post incubación</a></li>
+                      <li><a href="/pre_incubation">Pre incubación</a></li>
+                      <li><a href="/incubation">Incubación</a></li>
+                      <li><a href="/post_incubation">Post incubación</a></li>
                     </ul>
                   </li>
                   <li><a href="#">Tienda</a></li>
-                  <li><a href="/advice">Aprender</a></li>
+                  <li><a href="/service">Contáctenos</a></li>
                   <li><a href="#" class="btn btn-1">Iniciar Sesión</a></li>
                 </ul>
               </nav>
@@ -55,7 +54,7 @@
 
     <main class="py-4">
       @yield('content')
+      @include('footer.footer')
     </main>
-      
 </body>
 </html>

@@ -66,11 +66,58 @@
         
         
     </div>
-    @include('footer.footer')
+        
+    <!-- Seccion valores-->
+
+    <div class="content__values">
+        <!-- values_title controla un div diseñado para el titulo y line_tricolor para la parte de valores-->
+        <div class="values_title">
+            <h1>
+                VALORES
+            </h1>
+            <div class="line_tricolor"></div>
+        </div>
+        <!-- values_list y values_item controla el titulo, imagen y descripcion de cada valor-->
+        <div class="values_list">   
+              <div class="values_item">
+                    <img src="{{asset('img/transparencia.png')}}" alt="">
+                    <h1>
+                        Transparencia
+                    </h1>
+                    <p>
+                        Gestionando tanto operaciones de intermediación como trabajos
+                        de elaboracion propia, siempre trasladamos todas las 
+                        consideraciones explícitas e implícitas, y promovemos
+                        la comunicacíon entre todos los intervinientes en el 
+                        desarrollo de un servicio.
+                    </p>
+              </div>
+              <div class="values_item">
+                    <img src="{{asset('img/proactividad.png')}}" alt="">
+                    <h1>
+                        Proactividad
+                    </h1>
+                    <p>
+                        Somos conscientes del recorrido que tenemos
+                        por delante, de la dimensión que
+                        tenemos y de la necesidad de actualización y mejora continua.
+
+                    </p>
+              </div>
+              <div class="values_item">
+                    <img src="{{asset('img/honestidad.png')}}" alt="">
+                    <h1>
+                        Honestidad
+                    </h1>
+                    <p>
+                        Buscamos por iniciativa propia la solución a problemas sectoriales.
+                        Nos afanamos en tratar de anticiparnos a situaciones complicadas, que 
+                        la inanición suele complicar.
+                    </p>
+              </div>  
+        </div>
+                
+    </div>
 </body>
-
-
-
-   
 </html>
 @endsection

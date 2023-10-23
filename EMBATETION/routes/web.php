@@ -1,6 +1,6 @@
 <?php
 use App\Http\Controllers\SubscriberController;
-use App\Http\Controllers\AdviceRequestsController;
+use App\Http\Controllers\ServiceRequestsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -33,16 +33,31 @@ Route::get('/mission', function () {
 Route::get('/team', function () {
     return view('team.team');
 });
-
-
-
-Route::get('/advice', function () {
-    return view('advice.advice');
+Route::get('/work', function () {
+    return view('work.work');
 });
-Route::get('/request_tray', function () {
-    return view('advice.request_tray');
+
+
+Route::get('/pre_incubation', function () {
+    return view('pre_incubation.pre_incubation');
+});
+
+Route::get('/incubation', function () {
+    return view('incubation.incubation');
+});
+
+Route::get('/post_incubation', function () {
+    return view('post_incubation.post_incubation');
+});
+
+Route::get('/service', function () {
+    return view('contact.advice');
+});
+Route::get('/inbox', function () {
+    return view('inbox.request_tray');
 });
 Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
 Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
-Route::post('/advice', [AdviceRequestsController::class, 'sendScheduleAdvice'])->name('advice');
-
+Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
+Route::get('/admin-response', [ServiceRequestsController::class, 'messageReport'])->name('admin-response');
+Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');

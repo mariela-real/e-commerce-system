@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AdviceRequests extends Model
+class ServiceRequests extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id';
-    protected $table = 'advice_requests';
+    protected $table = 'service_requests';
 }

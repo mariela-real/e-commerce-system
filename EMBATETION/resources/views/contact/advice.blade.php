@@ -19,7 +19,7 @@
             <p>
             Complete el siguiente formulario para conectarse con nuestros expertos.  ¡Estamos emocionados de saber de usted! 
             </p>
-            @include('advice.schedule_advice')
+            @include('contact.service_request')
         </div>
         <div class="right">
             <h2>

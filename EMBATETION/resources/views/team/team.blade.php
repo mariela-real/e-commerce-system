@@ -21,7 +21,11 @@
                 Conoce al equipo de EMBATE
             </h1>
             <div>
-                <button type="submit" class="button__start">Contáctenos</a>  
+                <button type="submit" class="button__start">
+                <a href="/service" class="button__start">Contáctenos</a>
+                </button> 
+                
+
             </div> 
         </div>
         <!-- team__logo controla el logo de la pagina team -->
@@ -59,16 +63,9 @@
                 <button type="submit" class="button__link">Ver Linkedin</a> 
             </div>
             
-            
-            
-            
           </div>
       </div>
-    @include('footer.footer')
 </body>
 
-
-
-   
 </html>
 @endsection

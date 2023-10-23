@@ -19,7 +19,7 @@
       <div class="swiper-slide"><img src="{{asset('img/3.png')}}" alt=""></div>
       <div class="swiper-slide"><img src="{{asset('img/4.png')}}" alt=""></div>
       <div class="swiper-slide"><img src="{{asset('img/5.png')}}" alt=""> </div>
-   
+   </div>
     <!-- clase slide paginacion -->
     <div class="swiper-pagination"></div>
   
