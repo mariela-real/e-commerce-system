@@ -51,7 +51,7 @@
               <div class="body_items">
                 <div class="columna">
                     <div class="body_item">
-                        <div class="titulo" onclick="toggleTexto(this)">Selección rigurosa</div>
+                        <h3 class="titulo" onclick="toggleTexto(this)">Selección rigurosa</h3>
                         <div class="contenido">Nuestro primer paso es la selección y evaluación meticulosa.
                         Cada proyecto y emprendedor que se acerca a nosotros es
                         sometido a un análisis profundo. Nuestros evaluadores y
@@ -60,7 +60,7 @@
                         una emocionante colaboración con EMBATE.</div>
                     </div>
                     <div class="body_item">
-                        <div class="titulo" onclick="toggleTexto(this)">Capacitación personalizada</div>
+                        <h3 class="titulo" onclick="toggleTexto(this)">Capacitación personalizada</h3>
                         <div class="contenido">Una vez dentro de EMBATE, te ofrecemos mucho más que un
                             simple espacio de trabajo.
                             Aquí encontrarás capacitación y asesoramiento
@@ -69,7 +69,7 @@
                             las herramientas, sino que te enseñamos a usarlas.</div>
                     </div>
                     <div class="body_item">
-                        <div class="titulo" onclick="toggleTexto(this)">Seguimiento continuo</div>
+                        <h3 class="titulo" onclick="toggleTexto(this)">Seguimiento continuo</h3>
 
                         <div class="contenido">Reconocemos que el camino emprendedor está lleno de desafíos. 
                             Por lo tanto, en EMBATE, te ofrecemos un seguimiento constante. Realizamos reuniones periódicas con 

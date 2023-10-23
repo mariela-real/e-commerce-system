@@ -58,6 +58,7 @@
     text-align: justify;
     padding: 10px;
     font-weight: bold;
+    margin-right: 50px;
 }
 
 
@@ -90,7 +91,7 @@
   transition: background-color 0.3s;
   font-size: 20px;
   border: 2px solid rgb(56, 181, 190); 
-  transition: 0.3s ease;
+ 
 }
 
 
@@ -100,13 +101,22 @@
   padding: 30px;
   background-color: rgb(56, 181, 190);
  text-align: justify;
-  max-height: 0;
-  opacity: 0;
+ 
   overflow: hidden;
   transition: max-height 0.1s, opacity 0.1s;
   
  
 }
+.contenido.active {
+    display: block;
+    
+    opacity: 1;
+}
+
+
+
+
+
 
 .titulo.seleccionado {
     background-color: rgb(56, 181, 190);
@@ -137,7 +147,9 @@
     .body_description{
         text-align: center;
         align-items: center;
+        margin-right: 0px;
     }
+    
   }
 
   @media (max-width: 560px){
