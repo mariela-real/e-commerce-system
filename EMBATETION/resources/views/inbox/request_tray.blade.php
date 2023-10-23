@@ -18,6 +18,8 @@
   <header>
     <nav class="navbar navbar-light bg-light navbar__messages">
       <div class="container-fluid">
+      <a class="navbar-brand" href="#"><span id="Nlogo">EMBATE</span><img src="{{asset('img/OSOS_EMBATE.png')}}"
+    width="50" id="logo"></a>
         <h3>Bandeja de solicitudes </h3>
         <form class="d-flex">
             <a href="admin-response">
@@ -31,9 +33,8 @@
   </header>
     <div id="Container" class="container-fluid">
             <div id="tipos">
-              
-            <span class="tipo_m" id="llegada">Recibidos</span>
-            <span class="tipo_m" id="urgencia">Enviados</span>
+            <span class="tipo_m" id="received">Recibidos</span>
+            <span class="tipo_m" id="sent">Enviados</span>
 
            </div>
         <div id="tabla">
@@ -46,7 +47,7 @@
                 </thead>
                 <tbody>
                 @foreach($show_messages as $show_message)
-                <tr>
+                <tr class="efecto {{$show_message->state}}" data-url="{{route('message',['id'=>$show_message->id])}}">
                   <td>{{$show_message->firstName . ' ' . $show_message->lastName}}</td>
                   <td>{{$show_message->subject}}</td>
                   <td>{{$show_message->created_at}}</td>
@@ -59,35 +60,42 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   @yield('js')
   <script>
-    $(function () {$('table.table tr').click(function () {  
-      if( $(this).data('url')!=null){
+    $(function () {$('table.table tr').click(function () 
+      {  
+      if( $(this).data('url')!=null)
+      {
         window.location.href = $(this).data('url');
       }
        });
     }) 
   </script>
 <script>
-    //menu hamburguesa
   var menu=document.getElementsByClassName("nav-link");
   var btn_menu=document.getElementById("menu")
-  btn_menu.onclick=function(){
-    if(btn_menu.innerHTML=="menu"){
-      for(var i=0 ; i<menu.length;i++){
-      menu[i].style.display="block"
+  btn_menu.onclick=function()
+  {
+    if(btn_menu.innerHTML=="menu")
+    {
+      for(var i=0 ; i<menu.length;i++)
+      {
+       menu[i].style.display="block"
       }
        btn_menu.innerHTML="close";
-    }else{
-      for(var i=0 ; i<menu.length;i++){
-      menu[i].style.display="none"
     }
-    btn_menu.innerHTML="menu";
+    else
+    {
+      for(var i=0 ; i<menu.length;i++)
+      {
+        menu[i].style.display="none"
+      }
+      btn_menu.innerHTML="menu";
     }
   }
 </script>
 <script>
- var llegada=document.getElementById("llegada")
- var urgencia=document.getElementById("urgencia")
- llegada.style.background="grey" 
+ var received=document.getElementById("received")
+ var sent=document.getElementById("sent")
+ received.style.background="grey" 
 </script>
 </body>
 

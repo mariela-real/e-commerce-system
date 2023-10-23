@@ -35,8 +35,7 @@ class ServiceRequestsController extends Controller
     public function show($id)
     {
         $show_messages = ServiceRequests::find($id);
-        return view('inbox.request_tray', compact('show_messages'));
-
+        return view('inbox.message', compact('show_messages'));
     }
 
 

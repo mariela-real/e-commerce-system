@@ -53,4 +53,4 @@ Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter']
 Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
 Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
 Route::get('/admin-response', [ServiceRequestsController::class, 'messageReport'])->name('admin-response');
-//Route::get('/respuesta/{id}', [reservaController::class, 'show'])->name('respuesta');
+Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
