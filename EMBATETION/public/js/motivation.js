@@ -28,26 +28,3 @@ const swiper = new Swiper('.swiper', {
     //},
   });
 
-const items = document.querySelectorAll('.item');
-
-const textos = document.querySelectorAll('.texto');
-
-   items[0].classList.add('active');
-   textos[0].style.display = 'block';
-
-  items.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      textos.forEach((texto) => {
-        texto.style.display = 'none';
-      });
-      
-      item.classList.add('active');
-      textos[index].style.display = 'block';
-
-    items.forEach((el) => {
-      el.classList.remove('active');
-    });
-
-    item.classList.add('active');
-    });
-  });
