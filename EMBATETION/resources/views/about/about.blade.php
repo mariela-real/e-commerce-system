@@ -40,9 +40,7 @@
           <div class="swiper-slide">
             <img src="{{asset('img/1.png')}}" alt="">
             <div class="text-overlay left">
-                <h1>
-                    EMBATE
-                </h1>
+                
                 <h2>
                     Nuestra Historia
                 </h2>
@@ -59,9 +57,7 @@
           <div class="swiper-slide">
             <img src="{{asset('img/2.png')}}" alt="">
             <div class="text-overlay right">
-                <h1>
-                    EMBATE
-                </h1>
+               
                 <h2>
                     Nuestra Actualidad
                 </h2>
@@ -77,9 +73,7 @@
           <div class="swiper-slide">
             <img src="{{asset('img/3.png')}}" alt="">
             <div class="text-overlay left">
-                <h1>
-                    EMBATE
-                </h1>
+                
                 <h2>
                     Nuestros Proyectos Destacados
                 </h2>
