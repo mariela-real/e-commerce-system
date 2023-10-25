@@ -14,18 +14,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::middleware(['guest'])->group(function () 
-{
-    Route::get('/', function () {
-        return view('home.home');
-    });
+
     Route::get('/login', function () {
         return view('login.form_login');
     });
-    Route::post('login', [AuthController::class, 'authenticate']);
-});
-
-Route::middleware(['auth'])->group(function () {
+    Route::get('/', function () {
+        return view('home.home');
+    });
 
     Route::get('/about', function () {
         return view('about.about');
@@ -71,7 +66,4 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin-response', [ServiceRequestsController::class, 'messageReport'])->name('admin-response');
     Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
     //Route::post('/message', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('message');
-
-Route::post('logout', [AuthController::class, 'logout']);
-});
 
