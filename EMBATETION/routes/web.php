@@ -14,50 +14,64 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('home.home');
-});
-Route::get('/about', function () {
-    return view('about.about');
-});
-
-Route::get('/motivation', function () {
-    return view('motivation.motivation');
-});
-
-Route::get('/mission', function () {
-    return view('mission_vision.mission_vision');
+Route::middleware(['guest'])->group(function () 
+{
+    Route::get('/', function () {
+        return view('home.home');
+    });
+    Route::get('/login', function () {
+        return view('login.form_login');
+    });
+    Route::post('login', [AuthController::class, 'authenticate']);
 });
 
-Route::get('/team', function () {
-    return view('team.team');
-});
-Route::get('/work', function () {
-    return view('work.work');
-});
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/about', function () {
+        return view('about.about');
+    });
+
+    Route::get('/motivation', function () {
+        return view('motivation.motivation');
+    });
+
+    Route::get('/mission', function () {
+        return view('mission_vision.mission_vision');
+    });
+
+    Route::get('/team', function () {
+        return view('team.team');
+    });
+    Route::get('/work', function () {
+        return view('work.work');
+    });
 
 
-Route::get('/pre_incubation', function () {
-    return view('pre_incubation.pre_incubation');
+    Route::get('/pre_incubation', function () {
+        return view('pre_incubation.pre_incubation');
+    });
+
+    Route::get('/incubation', function () {
+        return view('incubation.incubation');
+    });
+
+    Route::get('/post_incubation', function () {
+        return view('post_incubation.post_incubation');
+    });
+
+    Route::get('/service', function () {
+        return view('contact.advice');
+    });
+    Route::get('/inbox', function () {
+        return view('inbox.request_tray');
+    });
+    Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
+    Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
+    Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
+    Route::get('/admin-response', [ServiceRequestsController::class, 'messageReport'])->name('admin-response');
+    Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
+    //Route::post('/message', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('message');
+
+Route::post('logout', [AuthController::class, 'logout']);
 });
 
-Route::get('/incubation', function () {
-    return view('incubation.incubation');
-});
-
-Route::get('/post_incubation', function () {
-    return view('post_incubation.post_incubation');
-});
-
-Route::get('/service', function () {
-    return view('contact.advice');
-});
-Route::get('/inbox', function () {
-    return view('inbox.request_tray');
-});
-Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
-Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
-Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
-Route::get('/admin-response', [ServiceRequestsController::class, 'messageReport'])->name('admin-response');
-Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
