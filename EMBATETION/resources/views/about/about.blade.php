@@ -9,42 +9,105 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="{{asset('css/about.css')}}">
 </head>
 <body>
     <!-- conten__about controla toda la pagina acerca de, y clase text controla todo el texto de informacion-->
     <div class="content__about">
-        <div class="text">
+        <div class="text"> 
+            <h1>
+                ¿QUIENES SOMOS?
+            </h1>
+            <div class="line"></div>
+           
             <p>
-                En la incubadora de empresas de base tecnológica EMBATE a cargo del Msc. Rodrigo
-                Carlos Echeverría Herrera perteneciente al instituto de investigación de la facultad de
-                ciencias y tecnología.
-                EMBATE es una institución que se dedica a apoyar a emprendedores en la creación y
-                desarrollo de nuevas empresas, para que se pueda llevar a cabo esta finalidad la
-                incubadora cuenta con procedimientos y métodos que permiten brindar apoyo a los
-                emprendedores.
-                Uno de los métodos principales de la incubadora de empresas de base tecnológica
-                EMBATE es el proceso de selección y evaluación de los emprendedores y proyectos. La
-                incubadora cuenta con un evaluador y mentor que analizan cada propuesta de negocio y
-                emprendedor para determinar su viabilidad y potencial. Los emprendedores
-                seleccionados reciben capacitación y asesoramiento en diferentes áreas de negocio,
-                como finanzas, marketing, operaciones y estrategia.
-                La incubadora cuenta con espacios de trabajo compartidos, salas de reuniones y equipos
-                tecnológicos de última generación para que los emprendedores puedan desarrollar sus
-                proyectos con las herramientas adecuadas así lograr potenciar sus habilidades y
-                conocimientos.
-                En cuanto a los procedimientos, la incubadora tiene un proceso riguroso de seguimiento
-                y evaluación del progreso de los emprendedores. Se realizan reuniones periódicas con
-                los mentores para evaluar el avance de los proyectos y realizar ajustes si es necesario.
-                Además, se lleva un registro detallado de la gestión y finanzas de cada proyecto para
-                garantizar la transparencia y responsabilidad.
+                Somos EMBATE, la incubadora de empresas de base tecnológica que apoya a emprendedores en la creación y
+                 desarrollo de nuevas empresas. Liderada por el Msc. Rodrigo Carlos Echeverría Herrera y respaldada
+                  por el Instituto de Investigación de la Facultad de Ciencias y Tecnología, EMBATE 
+                  es el lugar donde las ideas se convierten en realidades empresariales.
             </p>
         </div>
-        <!-- about__logo controla el logo de la pargina acerca de -->
-        <div class="about__logo">
-            <img src="{{asset('img/logomodificado.jpg')}}" alt="">
-        </div>
+     
     </div>
+    <!-- content controla todo el slider de imagenes y textos de la pagina acerca de -->
+    <div class="content">
+        <!-- Slider tipo swiper -->
+      <div class="swiper">
+        <!-- clase q controla todo el slide -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="{{asset('img/1.png')}}" alt="">
+            <div class="text-overlay left">
+                <h1>
+                    EMBATE
+                </h1>
+                <h2>
+                    Nuestra Historia
+                </h2>
+                <p>
+                    Nuestra historia se remonta a 2009, cuando Eduardo Zambrana y 
+                    Julio Medina colaboraron con el viceministerio de Ciencias y 
+                    Tecnología y el Instituto Politécnico Nacional de México para crear una 
+                    plataforma de apoyo a emprendimientos. Inicialmente, comenzamos como una 
+                    iniciativa modesta que se desarrolló a lo largo de los años. Hubo dos fases de 
+                    desarrollo: una de 2009 a 2013 y otra desde 2019 hasta la actualidad
+                </p>               
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="{{asset('img/2.png')}}" alt="">
+            <div class="text-overlay right">
+                <h1>
+                    EMBATE
+                </h1>
+                <h2>
+                    Nuestra Actualidad
+                </h2>
+                <p>
+                    En la actualidad, EMBATE está en pleno crecimiento y desarrollo. 
+                    Hemos sido parte de la Universidad Mayor de San Simón (UMSS) a través del 
+                    Instituto de Investigación de la Facultad de Ciencias y Tecnología (IICyT) 
+                    desde 1992. Nuestros objetivos incluyen integrar la investigación en la formación profesional, generar espacios de formación en investigación y contribuir al desarrollo de la región y el país a través de la innovación y la tecnología.
+                </p>      
+            </div>
+          </div>
+           
+          <div class="swiper-slide">
+            <img src="{{asset('img/3.png')}}" alt="">
+            <div class="text-overlay left">
+                <h1>
+                    EMBATE
+                </h1>
+                <h2>
+                    Nuestros Proyectos Destacados
+                </h2>
+                <p>
+                    En nuestro camino de crecimiento, hemos trabajado en una 
+                    variedad de proyectos innovadores, desde fungicidas y repelentes naturales 
+                    hasta cigarrillos a base de lavanda. También estamos comprometidos con el 
+                    proyecto Ozono Pro, que mejora los cultivos a través de la aplicación de ozono 
+                    en el agua y el suelo. Estos proyectos son ejemplos del espíritu emprendedor y la 
+                    innovación que caracterizan a EMBATE.
+                </p>      
+            </div>
+          </div>
+          
+       </div>
+        <!-- clase slide paginacion -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- botones previo y siguiente del slide
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      
+        <!-- scrollbar del slide 
+        <div class="swiper-scrollbar"></div> -->
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="{{asset('js/about.js')}}"></script>
 </body>
 
 </html>
