@@ -90,7 +90,6 @@
 
 
     <script type="text/javascript" src="{{asset('js/post_incubation.js')}}"></script>
-    @include('footer.footer')
 </body>
 
 

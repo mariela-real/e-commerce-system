@@ -39,7 +39,8 @@
                     Nuestra metodología es nuestra brújula
                     en este emocionante viaje hacia el éxito.
                 </p>
-                <button type="submit" class="button__link">Contáctanos</a> 
+                <button type="submit" class="button__link">Contáctenos</button>
+              
               </div>
                 <!-- body_image controla la parte la segunda parte de la fila de contenido en la cual esta la imagen de logo-->
 

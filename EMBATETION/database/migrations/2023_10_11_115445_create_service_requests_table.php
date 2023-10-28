@@ -18,9 +18,10 @@ class CreateServiceRequestsTable extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->string('email');
-            $table->string('cell_phone_number');
             $table->string('subject');
             $table->text('message')->nullable();
+            $table->date('date');
+            $table->time('time');
             $table->string("state");
             $table->timestamps();
         });

@@ -42,8 +42,7 @@
         <span class="tipo_m"><b>Asunto:</b> {{$show_messages->subject }}</span>
         <span class="tipo_m"> <b>Mensaje:</b> {{$show_messages->message }}</span>
         <span class="tipo_m"> <b>Fecha:</b> {{$show_messages->created_at }}</span>
-        <button class="btn btn-dark" id="btn_aceptar">Aceptar</button>
-        <button class="btn btn-dark" id="btn_rechazar">Rechazar</button>
+        <button class="btn btn-dark" id="btn_aceptar">Responder</button>
         </div>
     </div>
 </body>

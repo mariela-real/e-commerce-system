@@ -43,7 +43,7 @@
                   </li>
                   <li><a href="#">Tienda</a></li>
                   <li><a href="/service">Contáctenos</a></li>
-                  <li><a href="#" class="btn btn-1">Iniciar Sesión</a></li>
+                  <li><a href="/login" class="btn btn-1">Iniciar Sesión</a></li>
                 </ul>
               </nav>
             </div>

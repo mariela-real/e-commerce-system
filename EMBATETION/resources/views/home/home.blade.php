@@ -14,8 +14,8 @@
     <!-- clase q controla todo el slide -->
     <div class="swiper-wrapper">
       <!-- Slides -->
-      <div class="swiper-slide"><img src="{{asset('img/1.png')}}" alt=""></div>
-      <div class="swiper-slide"><img src="{{asset('img/2.png')}}" alt=""></div>
+      <div class="swiper-slide"><img src="{{asset('img/taller.jpg')}}" alt=""></div>
+      <div class="swiper-slide"><img src="{{asset('img/rally.jpg')}}" alt=""></div>
       <div class="swiper-slide"><img src="{{asset('img/3.png')}}" alt=""></div>
       <div class="swiper-slide"><img src="{{asset('img/4.png')}}" alt=""></div>
       <div class="swiper-slide"><img src="{{asset('img/5.png')}}" alt=""> </div>

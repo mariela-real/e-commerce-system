@@ -10,7 +10,7 @@
    <body>
     <div class="container">
         <div class="text"></div>
-        <form form action="service" method="POST">
+        <form action="service" method="POST">
         @csrf
             <input type="text" name="firstName" id="firstName" placeholder="Nombre*" value="{{ old('firstName') }}"/>
             @if ($errors->has('firstName'))
@@ -24,11 +24,6 @@
             @if ($errors->has('email'))
                  <span class="text-danger">{{ $errors->first('email') }}</span>
             @endif
-            <input type ="text" name="cell_phone_number" id="cell_phone_number" placeholder="Télefono móvil*"value="{{ old('cell_phone_number') }}"/>
-            @if ($errors->has('cell_phone_number'))
-                  <span class="text-danger">{{ $errors->first('cell_phone_number') }}</span>
-            @endif
-   
             <select type ="text" name = "subject" value="{{ old('subject') }}"class="browser-default">
                <option value="" disabled selected>Principal servicio que necesitas*</option>
                <option value="Solicitud de asesoramiento">Solicitud de asesoramiento</option>
@@ -43,6 +38,37 @@
             @if ($errors->has('message'))
                   <span class="text-danger">{{ $errors->first('message') }}</span>
             @endif
+            <div class="col-5">
+               <label for="date">Fecha: </label>
+            </div> 
+            <br>
+            <div class="col-5">
+               <input type="date" name="date" id="date" class="date" value="{{ old('date') }}">
+               @if ($errors->has('date'))
+                     <span class="text-danger">{{ $errors->first('date') }}</span>
+               @endif
+               <br>
+            </div>
+            <br>
+                <div class="row">
+                    <div class="col-5">
+                        <label>Horario:</label>
+                    </div>
+                    <div class="col-5">
+                     <select name="time" id="time" value="{{ old('time') }}"class="form-select">
+                        <option value="8:30">8:30</option>
+                        <option value="8:50">8:50</option>
+                        <option value="9:10">9:10</option>
+                        <option value="9:30">9:30</option>
+                        <option value="9:50">9:50</option>
+                        <option value="10:10">10:10</option>
+                     </select>
+                     @if ($errors->has('time'))
+                          <span class="text-danger">{{ $errors->first('time') }}</span>
+                     @endif
+                     </div>
+                </div>
+                <br>
             <div class="g-recaptcha" data-sitekey="6Lcz_sMoAAAAAKlWj_K7PTb4AHeFUwI7fxJvFdZG"></div>
             @error('g-recaptcha-response')
             <span class="text-danger">{{ $message }}</span>
