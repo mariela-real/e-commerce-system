@@ -41,7 +41,6 @@ use Illuminate\Support\Facades\Route;
         return view('work.work');
     });
 
-
     Route::get('/pre_incubation', function () {
         return view('pre_incubation.pre_incubation');
     });
@@ -59,6 +58,9 @@ use Illuminate\Support\Facades\Route;
     });
     Route::get('/inbox', function () {
         return view('inbox.request_tray');
+    });
+    Route::get('/fecha', function(){
+        return view('inbox.reply_message');
     });
     Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
     Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');

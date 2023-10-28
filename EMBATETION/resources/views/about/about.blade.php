@@ -38,7 +38,7 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
-            <img src="{{asset('img/1.png')}}" alt="">
+            <img src="{{asset('img/embate_1.jpg')}}" alt="">
             <div class="text-overlay left">
                 
                 <h2>
@@ -55,7 +55,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <img src="{{asset('img/2.png')}}" alt="">
+            <img src="{{asset('img/embate_4.jpg')}}" alt="">
             <div class="text-overlay right">
                
                 <h2>
@@ -71,7 +71,7 @@
           </div>
            
           <div class="swiper-slide">
-            <img src="{{asset('img/3.png')}}" alt="">
+            <img src="{{asset('img/embate_collage.png')}}" alt="">
             <div class="text-overlay left">
                 
                 <h2>

@@ -28,9 +28,10 @@ class RequestServiceRequest extends FormRequest
             'firstName'=>'required|min:3|max:25',
             'lastName'=>'required|min:3|max:25',
             'email'=>'required|string|email|max:30',
-            'cell_phone_number'=>'required|min:7|max:20',
             'subject'=>'required',
             'message'=>'max:400',
+            'date'=>'required|date',
+            'time'=>'required',
             'g-recaptcha-response'=>'required',
         ];
 

@@ -19,9 +19,10 @@ class ServiceRequestsController extends Controller
         $service_requests->firstName = $request->firstName;
         $service_requests->lastName = $request->lastName;
         $service_requests->email = $request->email;
-        $service_requests->cell_phone_number = $request->cell_phone_number;
         $service_requests->subject = $request->subject;
         $service_requests->message = $request->message;
+        $service_requests->date = $request->date;
+        $service_requests->time = $request->time;
         $service_requests->state = "sent";
         $service_requests->save();
        

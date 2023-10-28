@@ -54,7 +54,7 @@
             <div class="grid__item">
                 
                 <h2>Talleres y seminarios</h3>
-                <img src="{{asset('img/motivationGrid.jpg')}}" alt="">
+                <img src="{{asset('img/taller2.jpg')}}" alt="">
                 <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </p>
                 <button type="submit" class="button__link">Ver más</a> 
@@ -72,7 +72,7 @@
             <div class="grid__item">
                 
                 <h2>Cursos</h3>
-                <img src="{{asset('img/motivationGrid.jpg')}}" alt="">
+                <img src="{{asset('img/curso.jpg')}}" alt="">
                 <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </p>
                 <button type="submit" class="button__link">Ver más</a> 

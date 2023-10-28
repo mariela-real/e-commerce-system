@@ -21,16 +21,12 @@
                 <div class="row">
                     <div class="col-5"><label>Horario:</label></div>
                     <div class="col-5"><select name="horario" id="horario" class="form-select">
-                        <option value="6:45">6:45</option>
-                        <option value="8:15">8:15</option>
-                        <option value="9:45">9:45</option>
-                        <option value="11:15">11:15</option>
-                        <option value="12:45">12:45</option>
-                        <option value="14:15">14:15</option>
-                        <option value="15:45">15:45</option>
-                        <option value="17:15">17:15</option>
-                        <option value="18:45">18:45</option>
-                        <option value="20:15">20:15</option>
+                        <option value="6:45">8:30</option>
+                        <option value="8:15">8:50</option>
+                        <option value="9:45">9:10</option>
+                        <option value="11:15">9:30</option>
+                        <option value="12:45">9:50</option>
+                        <option value="14:15">10:10</option>
                     </select></div>
                 </div><br>
             <input type="submit" value="Enviar datos"/>
