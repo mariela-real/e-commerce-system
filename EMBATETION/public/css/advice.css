@@ -110,11 +110,14 @@ body{
 }
 #split-screen{
     display: flex;
+    margin-top: 50px;
+    
+    text-align: center;
 }
 .creative{
     color:#ffffff;
 }
-h1{
+.left h1{
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -126,7 +129,7 @@ h1{
     margin-right: 10rem;
     margin-top: 1rem;
 }
-h2{
+.right h2{
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -136,7 +139,7 @@ h2{
     margin-left: 2rem;
     margin-top: 8rem;
 }
-p{
+.left p{
     color: rgb(0, 0, 0);
     font-family: 'Nunito', sans-serif;
     font-size: 1.5rem;
@@ -148,7 +151,7 @@ p{
 .to-line-up{
     margin-left: 5rem;
 }
-img{
+.left img{
 	width:200px;
 	margin-left: 10.7rem;
     margin-right: 15rem;

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
@@ -5,7 +6,7 @@
       <link rel="stylesheet" href="{{asset('css/form.css')}}">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-      
+       
    </head>
    <body>
     <div class="container">
@@ -24,7 +25,7 @@
             @if ($errors->has('email'))
                  <span class="text-danger">{{ $errors->first('email') }}</span>
             @endif
-            <select type ="text" name = "subject" value="{{ old('subject') }}"class="browser-default">
+            <select type ="text" name = "subject" value="{{ old('subject') }}"class="browser-default" id="serviceSelect">
                <option value="" disabled selected>Principal servicio que necesitas*</option>
                <option value="Solicitud de asesoramiento">Solicitud de asesoramiento</option>
                <option value="Práctica pre profesional">Práctica pre profesional</option>
@@ -34,7 +35,7 @@
                   <span class="text-danger">{{ $errors->first('subject') }}</span>
             @endif
    
-            <textarea name="message" for="message" placeholder="¿Como podemos ayudar?" maxlength="300"value="{{ old('message') }}"></textarea>
+            <textarea name="message" id="area" for="message" placeholder="¿Como podemos ayudar?" maxlength="300"value="{{ old('message') }}"></textarea>
             @if ($errors->has('message'))
                   <span class="text-danger">{{ $errors->first('message') }}</span>
             @endif
@@ -77,5 +78,6 @@
          </form>
      </div>
      <script type="text/javascript" src="{{asset('js/form.js')}}"></script>
+ 
    </body>
 </html>

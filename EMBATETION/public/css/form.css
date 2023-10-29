@@ -1,20 +1,33 @@
-*{box-sizing:border-box;}
+*{
+	box-sizing:border-box;
+	
+}
 
 form{
-	width:400px;
-	padding:30px;
+	width:500px;
+	padding:40px 80px 80px 80px;
 	border-radius:10px;
 	/*margin:auto;*/
   margin-left: 10.7rem;
   margin-right: 10.7rem;
 	background-color:#ccc;
   margin-top: 2rem;
+ 
+  text-align: start;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 form label{
 	width:72px;
 	font-weight:bold;
 	display:inline-block;
+}
+#firstName, #lastName, #email, #area{
+	padding: 15px 40px 15px 10px;
+}
+
+#serviceSelect{
+	margin: 10px 0px 10px 0px;
 }
 
 form input[type="text"],
@@ -29,14 +42,16 @@ form input[type="email"]{
 }
 
 form input[type="submit"]{
-	width:40%;
+	width:100%;
 	padding:8px 16px;
 	margin-top:32px;
 	border:1px solid #000;
 	border-radius:5px;
-	display:block;
+	
 	color:#fff;
 	background-color:#000;
+	justify-content: center;
+	text-align: center;
 } 
 
 form input[type="submit"]:hover{
@@ -56,4 +71,18 @@ textarea{
 }
 span{
   color:#b91616
+}
+
+.container{
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	margin-top: 50px;
+}
+
+.g-recaptcha{
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
 }
