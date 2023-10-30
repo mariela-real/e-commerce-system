@@ -13,15 +13,15 @@
         <div class="text"></div>
         <form action="service" method="POST">
         @csrf
-            <input type="text" name="firstName" id="firstName" placeholder="Nombre*" value="{{ old('firstName') }}"/>
+            <input type="text" name="firstName" id="firstName" placeholder="Nombre*" class="form-control" value="{{ old('firstName') }}"/>
             @if ($errors->has('firstName'))
                  <span class="text-danger">{{ $errors->first('firstName') }}</span>
             @endif
-            <input type="text" name="lastName" id="lastName" placeholder="Apellido*" value="{{ old('lastName') }}"/>
+            <input type="text" name="lastName" id="lastName" placeholder="Apellido*" class="form-control" value="{{ old('lastName') }}"/>
             @if ($errors->has('lastName'))
                  <span class="text-danger">{{ $errors->first('lastName') }}</span>
             @endif
-            <input type="email" name="email" id="email" placeholder="Correo electrónico*"value="{{ old('email') }}"/>
+            <input type="email" name="email" id="email" placeholder="Correo electrónico*" class="form-control" value="{{ old('email') }}"/>
             @if ($errors->has('email'))
                  <span class="text-danger">{{ $errors->first('email') }}</span>
             @endif
@@ -39,11 +39,14 @@
             @if ($errors->has('message'))
                   <span class="text-danger">{{ $errors->first('message') }}</span>
             @endif
-            <div class="col-5">
-               <label for="date">Fecha: </label>
-            </div> 
-            <br>
-            <div class="col-5">
+            
+            <div class="horaFecha">
+           
+            
+            <div class="row">
+               <div class="col-5">
+                  <label for="date">Fecha: </label>
+               </div> 
                <input type="date" name="date" id="date" class="date" value="{{ old('date') }}">
                @if ($errors->has('date'))
                      <span class="text-danger">{{ $errors->first('date') }}</span>
@@ -51,7 +54,7 @@
                <br>
             </div>
             <br>
-                <div class="row">
+            <div class="row">
                     <div class="col-5">
                         <label>Horario:</label>
                     </div>
@@ -68,7 +71,8 @@
                           <span class="text-danger">{{ $errors->first('time') }}</span>
                      @endif
                      </div>
-                </div>
+            </div>
+         </div>
                 <br>
             <div class="g-recaptcha" data-sitekey="6Lcz_sMoAAAAAKlWj_K7PTb4AHeFUwI7fxJvFdZG"></div>
             @error('g-recaptcha-response')

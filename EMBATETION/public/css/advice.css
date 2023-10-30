@@ -100,13 +100,13 @@ body{
 }
 .left{
     background: #ffffff;
-    height: 200vh;
+    height: 190vh;
 
 }
 .right{
     background: #201f1f;
     width: 30%;
-    height: 200vh;
+    height: 190vh;
 }
 #split-screen{
     display: flex;
