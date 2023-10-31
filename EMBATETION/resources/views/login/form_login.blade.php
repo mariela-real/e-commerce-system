@@ -1,13 +1,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+<link rel="stylesheet" href="{{asset('css/login.css')}}">
 
 <div class="container-fluid">
-  <div class="row d-flex justify-content-center align-items-center m-0" style="height: 100vh;">
+  <div class="row d-flex justify-content-center align-items-center m-0 login_form" style="">
     <div  class="d-flex" id="formularioEditar">
 
       <form method="POST" action="/login" id="formulario">
       @csrf
+      <div class="logo_login">
+        <img src="img/OSOS_EMBATE.png" />
+      </div>
+   
       <h3 text-center>Iniciar sesión</h3>
         <div class="form-row">    
           <div class="col-12">
@@ -44,7 +49,7 @@
           </div>
 
 
-          <div class="col-12">
+          <div class="col-12 login_buttom">
             <button class="btn btn-dark btn-block btn-lg ed" id="acceder" type="submit">
                 Acceder
             </button>

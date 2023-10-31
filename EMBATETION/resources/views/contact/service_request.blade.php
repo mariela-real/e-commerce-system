@@ -12,6 +12,11 @@
     <div class="container">
         <div class="text"></div>
         <form action="service" method="POST">
+            <div class="form_title">
+               <h2>
+                  SOLICITAR UNA REUNIÓN
+               </h2>
+            </div>
         @csrf
             <input type="text" name="firstName" id="firstName" placeholder="Nombre*" class="form-control" value="{{ old('firstName') }}"/>
             @if ($errors->has('firstName'))
