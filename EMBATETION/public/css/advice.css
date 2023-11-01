@@ -101,7 +101,7 @@ body{
 }
 .left{
     background: #ffffff;
-    height: 190vh;
+    
     width: 70%;
     display: flex;
     align-items: center;
@@ -113,7 +113,7 @@ body{
 .right{
     background: #201f1f;
     width: 30%;
-    height: 190vh;
+   
     margin-top: 50px;
 }
 #split-screen{
