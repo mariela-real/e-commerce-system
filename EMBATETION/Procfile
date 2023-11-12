@@ -1,0 +1,1 @@
+web: apache2 -D FOREGROUND -f EMBATETION/public/.htaccess
