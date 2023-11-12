@@ -44,7 +44,7 @@
             @if ($errors->has('message'))
                   <span class="text-danger">{{ $errors->first('message') }}</span>
             @endif
-            
+            <h3>Agenda una cita </h3>
             <div class="horaFecha">
            
             
@@ -75,10 +75,10 @@
                      @if ($errors->has('time'))
                           <span class="text-danger">{{ $errors->first('time') }}</span>
                      @endif
-                     </div>
+                    </div>
             </div>
          </div>
-                <br>
+            <br>
             <div class="g-recaptcha" data-sitekey="6Lcz_sMoAAAAAKlWj_K7PTb4AHeFUwI7fxJvFdZG"></div>
             @error('g-recaptcha-response')
             <span class="text-danger">{{ $message }}</span>
