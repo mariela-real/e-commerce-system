@@ -1,1 +1,1 @@
-web: apache2 -D FOREGROUND -f EMBATETION/public/.htaccess
+web: apache2 -D FOREGROUND -f C:\Users\20200\OneDrive\Documentos\EMBATE\e-commerce-system\EMBATETION\public\.htaccess
