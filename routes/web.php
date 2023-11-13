@@ -73,3 +73,7 @@ use Illuminate\Support\Facades\Route;
     Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
     //Route::post('/message', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('message');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

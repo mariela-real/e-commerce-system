@@ -17,9 +17,12 @@
         "google/recaptcha": "^1.2",
         "guzzlehttp/guzzle": "^7.0.1",
         "innovareti/password-policy": "^1.4",
+        "intervention/image": "^2.7",
         "laravel-lang/lang": "^7.0",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
+        "laravel/ui": "^3.2",
+        "laravelcollective/html": "^6.4",
         "spatie/laravel-permission": "^5.11"
     },
     "require-dev": {

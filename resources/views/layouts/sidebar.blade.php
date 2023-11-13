@@ -3,13 +3,13 @@
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
                         
-                    <a class="nav-link" href="charts.html">
+                    <a class="nav-link" href="/admin">
                         <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                         Charts
+                        Admin
                     </a>
-                    <a class="nav-link" href="tables.html">
+                    <a class="nav-link" href="/admin/user">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                          Tables
+                        Usuarios
                     </a>
             </div>
     </div>     
