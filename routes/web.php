@@ -62,6 +62,10 @@ use Illuminate\Support\Facades\Route;
     Route::get('/fecha', function(){
         return view('inbox.reply_message');
     });
+    Route::group(['prefix'=>'admin','as'=> 'admin' ], function(){
+        Route::get('/', function() {return view('admin'); });
+        Route::get('/user', function(){return view('user'); });
+    });
     Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
     Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
     Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
