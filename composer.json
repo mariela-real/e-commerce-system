@@ -17,8 +17,8 @@
         "google/recaptcha": "^1.2",
         "guzzlehttp/guzzle": "^7.0.1",
         "innovareti/password-policy": "^1.4",
-        "laravel-lang/lang": "7.0",
-        "laravel/framework": "8.0",
+        "laravel-lang/lang": "^7.0",
+        "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "spatie/laravel-permission": "^5.11"
     },
