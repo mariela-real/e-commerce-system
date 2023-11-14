@@ -1,73 +1,79 @@
-@extends('layouts.app')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+<link rel="stylesheet" href="{{asset('css/login.css')}}">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center align-items-center m-0 login_form" style="">
+    <div  class="d-flex" id="formularioEditar">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+      <form method="POST" action="{{ route('login') }}" id="formulario">
+      @csrf
+      <div class="logo_login">
+        <img src="img/OSOS_EMBATE.png" />
+      </div>
+   
+      <h3 class=text-center>Iniciar sesión</h3>
+        <div class="form-row">    
+          <div class="col-12">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+              </div>
+              <input name="userName" type="text" class="form-control" id="userName" placeholder="Usuario"  
+              autofocus value="{{old('userName')}}"/>
+            </div>
+            @if ($errors->has('userName'))
+               <span class="error text-danger" for="input-user">{{ $errors->first('userName') }}</span>
+            @endif  
+            <br>        
+          </div>
+          
+          <div class="col-12">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+              </div>
+                <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña"  
+                autofocus value="{{old('password')}}" />
+                <div class="input-group-append">
+                  <span class="input-group-text" onclick="password_show_hide();">
+                    <i class="fas fa-eye d-none" id="show_eye"></i>
+                    <i class="fas fa-eye-slash " id="hide_eye"></i>
+                  </span>
                 </div>
             </div>
+            @if ($errors->has('password'))
+                <span class="error text-danger" for="password">{{ $errors->first('password') }}</span>
+            @endif
+          </div>
+          <div class="col-12 login_buttom">
+            <button class="btn btn-dark btn-block btn-lg ed" id="acceder" type="submit">
+                Acceder
+            </button>
+          </div>
         </div>
+      </form>
     </div>
+  </div>
 </div>
-@endsection
+
+
+<script>
+function password_show_hide() {
+  var x = document.getElementById("password");
+  var hide_eye = document.getElementById("hide_eye");
+  var show_eye = document.getElementById("show_eye");
+  
+  show_eye.classList.remove("d-none");
+  if (x.type === "password") {
+    x.type = "text";
+    show_eye.style.display = "block";
+    hide_eye.style.display = "none";
+  } else {
+    x.type = "password";
+    show_eye.style.display = "none";
+    hide_eye.style.display = "block";
+  }
+}
+</script>

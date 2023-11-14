@@ -21,6 +21,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    //todo lo que se mostrara despues de ser autenticado
     public function index()
     {
         return view('home');

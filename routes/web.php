@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceRequestsController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-    Route::get('/login', function () {
+    /*Route::get('/login', function () {
         return view('login.form_login');
-    });
+    });*/
     Route::get('/', function () {
         return view('home.home');
     });
@@ -62,10 +63,7 @@ use Illuminate\Support\Facades\Route;
     Route::get('/fecha', function(){
         return view('inbox.reply_message');
     });
-    Route::group(['prefix'=>'admin','as'=> 'admin' ], function(){
-        Route::get('/', function() {return view('admin'); });
-        Route::get('/user', function(){return view('user'); });
-    });
+
     Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
     Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
     Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
@@ -77,3 +75,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['prefix'=>'admin','as'=> 'admin' ], function(){
+    Route::get('/', function() {return view('admin'); });
+    Route::get('/user', function(){return view('user'); });
+});

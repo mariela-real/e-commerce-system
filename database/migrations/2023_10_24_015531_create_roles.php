@@ -20,8 +20,6 @@ class CreateRoles extends Migration
         $role2 = Role::create(['name'=>'super user']);
         $role3 = Role::create(['name'=>'supervisor']);
         $role4 = Role::create(['name'=>'entrepreneur']);
-        $user = User::find(1);
-        $user->assignRole($role1);
     }
 
     /**
