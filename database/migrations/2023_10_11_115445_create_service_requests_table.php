@@ -22,7 +22,7 @@ class CreateServiceRequestsTable extends Migration
             $table->text('message')->nullable();
             $table->date('date');
             $table->time('time');
-            $table->string("state");
+            $table->string('state');
             $table->timestamps();
         });
     }
