@@ -27,8 +27,40 @@
             <h2>
                 <span class="creative">Empresas que confían en nuestra experiencia </span>
             </h2>
+            <div class="right_images">
+                <div class="image">
+                    <img src="img/1.png" alt="Imagen 1">
+                </div>
+
+                <div class="image">
+                    <img src="img/2.png" alt="Imagen 1">
+                </div>
+
+                <div class="image">
+                    <img src="img/3.png" alt="Imagen 1">
+                </div>
+
+                <div class="image">
+                    <img src="img/4.png" alt="Imagen 1">
+                </div>
+
+                <div class="image">
+                    <img src="img/5.png" alt="Imagen 1">
+                </div>
+
+                <div class="image">
+                    <img src="img/5.png" alt="Imagen 1">
+                </div>
+
+                <div class="image">
+                    <img src="img/5.png" alt="Imagen 1">
+                </div>
+            </div>
         </div>
     </section>
+
+    <script type="text/javascript" src="{{asset('js/advice.js')}}"></script>
+
 </body>
 </html>
 
