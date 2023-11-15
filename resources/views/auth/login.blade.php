@@ -13,18 +13,18 @@
         <img src="img/OSOS_EMBATE.png" />
       </div>
    
-      <h3 text-center>Iniciar sesión</h3>
+      <h3 class=text-center>Iniciar sesión</h3>
         <div class="form-row">    
           <div class="col-12">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
               </div>
-              <input name="usuario" type="text" class="form-control" id="username" placeholder="Usuario"  
-              autofocus value="{{old('usuario')}}"/>
+              <input type="text" name="username"  class="form-control" id="username" placeholder="Usuario"  
+              autofocus value="{{old('username')}}"/>
             </div>
-            @if ($errors->has('usuario'))
-               <span class="error text-danger" for="input-usuario">{{ $errors->first('usuario') }}</span>
+            @if ($errors->has('username'))
+            <span class="error text-danger" id="input-user">{{ $errors->first('username') }}</span>
             @endif  
             <br>        
           </div>
@@ -34,8 +34,8 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
               </div>
-                <input name="contrasenia" type="password" class="form-control" id="password" placeholder="Contraseña"  
-                value="{{old('contrasenia')}}" />
+                <input  type="password"  name="password" class="form-control" id="password" placeholder="Contraseña"  
+                autofocus value="{{old('password')}}" />
                 <div class="input-group-append">
                   <span class="input-group-text" onclick="password_show_hide();">
                     <i class="fas fa-eye d-none" id="show_eye"></i>
@@ -43,31 +43,24 @@
                   </span>
                 </div>
             </div>
-            @if ($errors->has('contrasenia'))
-                <span class="error text-danger" for="password">{{ $errors->first('contrasenia') }}</span>
+            @if ($errors->has('password'))
+            <span class="error text-danger" id="password">{{ $errors->first('password') }}</span>
+
             @endif
           </div>
-
-
+          
           <div class="col-12 login_buttom">
             <button class="btn btn-dark btn-block btn-lg ed" id="acceder" type="submit">
                 Acceder
             </button>
           </div>
         </div>
+        
       </form>
     </div>
   </div>
 </div>
-<script>
-      var inicio=document.getElementById("inicio");
-      inicio.href="/"
-      var perfil=document.getElementById("perfil");
-      perfil.style.display="none"
 
-     var campana=document.getElementById("campana");
-     campana.style.display="none"
-</script>
 
 <script>
 function password_show_hide() {

@@ -1,6 +1,9 @@
 <?php
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ServiceRequestsController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,10 +17,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-    Route::get('/login', function () {
-        return view('login.form_login');
-    });
     Route::get('/', function () {
         return view('home.home');
     });
@@ -62,10 +61,7 @@ use Illuminate\Support\Facades\Route;
     Route::get('/fecha', function(){
         return view('inbox.reply_message');
     });
-    Route::group(['prefix'=>'admin','as'=> 'admin' ], function(){
-        Route::get('/', function() {return view('admin'); });
-        Route::get('/user', function(){return view('user'); });
-    });
+
     Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
     Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
     Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
@@ -73,3 +69,18 @@ use Illuminate\Support\Facades\Route;
     Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
     //Route::post('/message', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('message');
 
+    Route::middleware(['guest'])->group(function () {
+    Route::get('/login', function () {
+     return view('auth.login');
+    })->name('login');
+   
+    Route::post('login', [LoginController::class, 'authenticate']);
+    });
+    Route::middleware(['auth'])->group(function () {
+        Route::group(['prefix'=>'admin','as'=> 'admin' ], function(){
+            Route::get('/', function() {return view('admin'); });
+            Route::get('/user', function(){return view('user'); });
+        });
+
+   Route::post('logout', [LoginController::class, 'logout']);
+});

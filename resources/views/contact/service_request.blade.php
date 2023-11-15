@@ -18,13 +18,13 @@
                </h2>
             </div>
         @csrf
-            <input type="text" name="firstName" id="firstName" placeholder="Nombre*" class="form-control" value="{{ old('firstName') }}"/>
-            @if ($errors->has('firstName'))
-                 <span class="text-danger">{{ $errors->first('firstName') }}</span>
+            <input type="text" name="firstname" id="firstname" placeholder="Nombre*" class="form-control" value="{{ old('firstname') }}"/>
+            @if ($errors->has('firstname'))
+                 <span class="text-danger">{{ $errors->first('firstname') }}</span>
             @endif
-            <input type="text" name="lastName" id="lastName" placeholder="Apellido*" class="form-control" value="{{ old('lastName') }}"/>
-            @if ($errors->has('lastName'))
-                 <span class="text-danger">{{ $errors->first('lastName') }}</span>
+            <input type="text" name="lastname" id="lastname" placeholder="Apellido*" class="form-control" value="{{ old('lastname') }}"/>
+            @if ($errors->has('lastname'))
+                 <span class="text-danger">{{ $errors->first('lastname') }}</span>
             @endif
             <input type="email" name="email" id="email" placeholder="Correo electrónico*" class="form-control" value="{{ old('email') }}"/>
             @if ($errors->has('email'))

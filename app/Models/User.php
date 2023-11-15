@@ -12,14 +12,17 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
     use HasRoles;
 
+    protected $table = 'users';
+
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+   
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'lastname', 'ci', 'email', 'username',  'password', 'state',
     ];
 
     /**
@@ -30,6 +33,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
 
     /**
      * The attributes that should be cast to native types.

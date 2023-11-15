@@ -25,8 +25,8 @@ class SubscriberRequest extends FormRequest
     {
         return 
         [
-            'firstName'=>'required|min:3|max:25',
-            'lastName'=>'required|min:3|max:25',
+            'firstname'=>'required|min:3|max:25',
+            'lastname'=>'required|min:3|max:25',
             'email'=>'required|string|email|max:50|unique:subscribers'
         ];
 
