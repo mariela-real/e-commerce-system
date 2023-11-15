@@ -18,18 +18,18 @@
         @csrf
             <div class="input__list">
                 <div class="input__item">
-                    <input type="text"  name="firstName" value="{{ old('firstName') }}" placeholder="" >
+                    <input type="text"  name="firstname" value="{{ old('firstname') }}" placeholder="" >
                     <label>NOMBRE</label>
-                    @if ($errors->has('firstName'))
-                    <span class="text-danger">{{ $errors->first('firstName') }}</span>
+                    @if ($errors->has('firstname'))
+                    <span class="text-danger">{{ $errors->first('firstname') }}</span>
                     @endif
                 </div>
                 <div class="input__item">
-                    <input type="text"  name="lastName" value="{{ old('lastName') }}" placeholder="">
+                    <input type="text"  name="lastname" value="{{ old('lastname') }}" placeholder="">
                     <label>APELLIDO</label>
 
-                    @if ($errors->has('lastName'))
-                    <span class="text-danger">{{ $errors->first('lastName') }}</span>
+                    @if ($errors->has('lastname'))
+                    <span class="text-danger">{{ $errors->first('lastname') }}</span>
                     @endif
                 </div>
                 <div class="input__item">

@@ -7,7 +7,7 @@
   <div class="row d-flex justify-content-center align-items-center m-0 login_form" style="">
     <div  class="d-flex" id="formularioEditar">
 
-      <form method="POST" action="{{ route('login') }}" id="formulario">
+      <form method="POST" action="/login" id="formulario">
       @csrf
       <div class="logo_login">
         <img src="img/OSOS_EMBATE.png" />
@@ -20,11 +20,11 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
               </div>
-              <input name="userName" type="text" class="form-control" id="userName" placeholder="Usuario"  
-              autofocus value="{{old('userName')}}"/>
+              <input type="text" name="username"  class="form-control" id="username" placeholder="Usuario"  
+              autofocus value="{{old('username')}}"/>
             </div>
-            @if ($errors->has('userName'))
-               <span class="error text-danger" for="input-user">{{ $errors->first('userName') }}</span>
+            @if ($errors->has('username'))
+            <span class="error text-danger" id="input-user">{{ $errors->first('username') }}</span>
             @endif  
             <br>        
           </div>
@@ -34,7 +34,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
               </div>
-                <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña"  
+                <input  type="password"  name="password" class="form-control" id="password" placeholder="Contraseña"  
                 autofocus value="{{old('password')}}" />
                 <div class="input-group-append">
                   <span class="input-group-text" onclick="password_show_hide();">
@@ -44,15 +44,18 @@
                 </div>
             </div>
             @if ($errors->has('password'))
-                <span class="error text-danger" for="password">{{ $errors->first('password') }}</span>
+            <span class="error text-danger" id="password">{{ $errors->first('password') }}</span>
+
             @endif
           </div>
+          
           <div class="col-12 login_buttom">
             <button class="btn btn-dark btn-block btn-lg ed" id="acceder" type="submit">
                 Acceder
             </button>
           </div>
         </div>
+        
       </form>
     </div>
   </div>
