@@ -52,7 +52,7 @@
 
   <script type="text/javascript" src="{{asset('js/navbar.js')}}"></script>
 
-    <main class="py-4">
+    <main class="">
       @yield('content')
       @include('footer.footer')
     </main>

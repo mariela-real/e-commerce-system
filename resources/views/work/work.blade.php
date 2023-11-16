@@ -20,7 +20,7 @@
                 ¿CÓMO TRABAJAMOS?
             </h1>
             <div class="line"></div>
-        </div>
+        </div> 
         <!-- work_body controla la parte la primera parte de la fila de contenido en la cual esta la descripcion y el boton de contacto-->
         <div class="work_body">
               <div class="body_description">
