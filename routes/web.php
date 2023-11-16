@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ServiceRequestsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -81,6 +82,7 @@ use Illuminate\Support\Facades\Route;
             Route::get('/', function() {return view('admin'); });
             Route::get('/user', function(){return view('user'); });
         });
+   // Route::get('/perfil', [MenuController::class, 'loadPerfil']);
 
    Route::post('logout', [LoginController::class, 'logout']);
 });

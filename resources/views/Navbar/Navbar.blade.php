@@ -41,7 +41,7 @@
                       <li><a href="/post_incubation">Post incubación</a></li>
                     </ul>
                   </li>
-                  <li><a href="https://embate.umss.edu.bo/">Tienda</a></li>
+                  <li><a href="https://embate.umss.edu.bo/tienda-navideno/">Tienda</a></li>
                   <li><a href="/service">Contáctenos</a></li>
                   <li><a href="/login" class="btn btn-1">Iniciar Sesión</a></li>
                 </ul>

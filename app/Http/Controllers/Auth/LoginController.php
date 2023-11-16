@@ -41,6 +41,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+ 
 
     public function authenticate(Request $request): RedirectResponse
     {
@@ -67,6 +68,7 @@ class LoginController extends Controller
                 
             ]);
     }
+
     public function logout(Request $request)
     {
         Auth::logout();
