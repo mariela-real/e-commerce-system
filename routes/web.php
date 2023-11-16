@@ -57,7 +57,7 @@ use Illuminate\Support\Facades\Route;
         return view('contact.advice');
     });
     Route::get('/inbox', function () {
-        return view('inbox.request_tray');
+        return view('contact.notifications');
     });
     Route::get('/fecha', function(){
         return view('inbox.reply_message');
@@ -66,10 +66,8 @@ use Illuminate\Support\Facades\Route;
     Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
     Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
     Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
-    Route::get('/admin-response', [ServiceRequestsController::class, 'messageReport'])->name('admin-response');
-    Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
-    //Route::post('/message', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('message');
 
+    
     Route::middleware(['guest'])->group(function () {
     Route::get('/login', function () {
      return view('auth.login');
@@ -78,11 +76,7 @@ use Illuminate\Support\Facades\Route;
     Route::post('login', [LoginController::class, 'authenticate']);
     });
     Route::middleware(['auth'])->group(function () {
-        Route::group(['prefix'=>'admin','as'=> 'admin' ], function(){
-            Route::get('/', function() {return view('admin'); });
-            Route::get('/user', function(){return view('user'); });
-        });
-   // Route::get('/perfil', [MenuController::class, 'loadPerfil']);
-
-   Route::post('logout', [LoginController::class, 'logout']);
-});
+        Route::get('/admin', [ServiceRequestsController::class, 'messageReport'])->name('admin');
+        Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
+        Route::post('logout', [LoginController::class, 'logout']);
+    });
