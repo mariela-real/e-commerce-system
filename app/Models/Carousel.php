@@ -11,9 +11,12 @@ class Carousel extends Model
     protected $table = 'carousels';
 
     protected $fillable = [
-        'description',
-        'url_photo',
-        'link',
-        'order',
+        'name',
     ];
+
+    public function slides()
+    {
+        return $this->hasMany(Slide::class);
+    }
+
 }

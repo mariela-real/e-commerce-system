@@ -24,7 +24,7 @@
                 Notificaciones
             </h6>
             </a>
-            @include('contact.notifications')
+
             <a class="dropdown-item text-center small text-gray-500" href="#">Mostrar todos</a>
         </div>
     </li>

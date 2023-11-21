@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    /*public function loadMenu(Request $request)
+    public function loadMenu(Request $request)
     {
         $user = Auth::user();
-        return view('layouts.sidebar',compact('user'));
-    }*/
+        return view('auth.profile.index',compact('user'));
+    }
 }
