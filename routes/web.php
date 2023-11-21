@@ -1,9 +1,14 @@
 <?php
 use App\Http\Controllers\SubscriberController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ServiceRequestsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\Admin\CarouselController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\CarouselHomeController;
+use App\Http\Controllers\Admin\CarouselAboutUsController;
+use App\Http\Controllers\Admin\CarouselOpinionController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -56,31 +61,30 @@ use Illuminate\Support\Facades\Route;
         return view('contact.advice');
     });
     Route::get('/inbox', function () {
-        return view('inbox.request_tray');
+        return view('contact.notifications');
     });
     Route::get('/fecha', function(){
         return view('inbox.reply_message');
     });
-
-    Route::get('/home', [SubscriberController::class, 'viewRegistrationSubscripter'])->name('home');
+    Route::get('/', [CarouselController::class, 'mainCarousel'])->name('/');
+    Route::get('/home', [CarouselController::class, 'mainCarousel'])->name('home');
+    Route::get('/about', [CarouselController::class, 'aboutUsCarousel'])->name('about');
+    Route::get('/motivation', [CarouselController::class, 'opinionsCarousel'])->name('motivacion');
     Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
     Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
-    Route::get('/admin-response', [ServiceRequestsController::class, 'messageReport'])->name('admin-response');
-    Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
-    //Route::post('/message', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('message');
+
 
     Route::middleware(['guest'])->group(function () {
-    Route::get('/login', function () {
-     return view('auth.login');
-    })->name('login');
-   
+    Route::get('/login', function () { return view('auth.login'); })->name('login');
     Route::post('login', [LoginController::class, 'authenticate']);
     });
     Route::middleware(['auth'])->group(function () {
-        Route::group(['prefix'=>'admin','as'=> 'admin' ], function(){
-            Route::get('/', function() {return view('admin'); });
-            Route::get('/user', function(){return view('user'); });
-        });
-
-   Route::post('logout', [LoginController::class, 'logout']);
-});
+        Route::get('/admin', [ServiceRequestsController::class, 'messageReport'])->name('admin');
+        Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
+        Route::resource('/setting', SettingController::class);
+        Route::resource('/carousel', CarouselHomeController::class);
+        Route::resource('/aboutUs_carousel', CarouselAboutUsController::class);
+        Route::resource('/opinions_carousel', CarouselOpinionController::class);
+        Route::get('/profile', [MenuController::class, 'loadMenu'])->name('profile');
+        Route::post('logout', [LoginController::class, 'logout']);
+    });

@@ -8,5 +8,5 @@ use App\Http\Requests\ValidatedAuthUserRequest;
 
 class UserController extends Controller
 {
-
+        
 }

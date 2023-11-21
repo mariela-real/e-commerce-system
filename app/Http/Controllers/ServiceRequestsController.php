@@ -16,8 +16,8 @@ class ServiceRequestsController extends Controller
     public function sendScheduleAdvice(RequestServiceRequest $request)
     {
         $service_requests = new ServiceRequests();
-        $service_requests->firstName = $request->firstName;
-        $service_requests->lastName = $request->lastName;
+        $service_requests->firstName = $request->firstname;
+        $service_requests->lastName = $request->lastname;
         $service_requests->email = $request->email;
         $service_requests->subject = $request->subject;
         $service_requests->message = $request->message;
@@ -25,13 +25,13 @@ class ServiceRequestsController extends Controller
         $service_requests->time = $request->time;
         $service_requests->state = "sent";
         $service_requests->save();
-       
+
         return redirect()->route('service')->with('register', 'ok');
-    } 
+    }
     public function messageReport()
     {
         $show_messages = ServiceRequests::all();
-        return view('inbox.request_tray', compact('show_messages'));
+        return view('admin', compact('show_messages'));
     }
     public function show($id)
     {

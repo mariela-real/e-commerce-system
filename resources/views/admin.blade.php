@@ -1,4 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<h1>estas en admin</h1>
+<!-- Page Heading -->
+<h1>Estas en admin</h1>
+      
 @endsection

@@ -48,7 +48,7 @@
                 <tbody>
                 @foreach($show_messages as $show_message)
                 <tr class="efecto {{$show_message->state}}" data-url="{{route('message',['id'=>$show_message->id])}}">
-                  <td>{{$show_message->firstName . ' ' . $show_message->lastName}}</td>
+                  <td>{{$show_message->firstname . ' ' . $show_message->lastname}}</td>
                   <td>{{$show_message->subject}}</td>
                   <td>{{$show_message->created_at}}</td>
               </tr> 
