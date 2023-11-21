@@ -19,12 +19,12 @@
         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
             aria-labelledby="alertsDropdown">
 
-            <a href="admin-response">
+            <a href="admin">
             <h6 class="dropdown-header">
                 Notificaciones
             </h6>
             </a>
-
+            @include('contact.notifications')
             <a class="dropdown-item text-center small text-gray-500" href="#">Mostrar todos</a>
         </div>
     </li>
