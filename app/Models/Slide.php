@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Slide extends Model
 {
     use HasFactory;
-    protected $fillable = [
+    /*protected $fillable = [
         'carousel_id',
         'description',
         'url_photo',
@@ -18,5 +18,6 @@ class Slide extends Model
     public function carousel()
     {
         return $this->belongsTo(Carousel::class);
-    }
+    }*/
+
 }
