@@ -12,13 +12,26 @@ class SlideController extends Controller
     public function index()
     {
         $carousels = Slide::with('carousel')->get();
-        return view('admin.carousel.index', compact('carousels'));
+        return view('admin.carousel.carousel_home.index', compact('carousels'));
     }
+    public function index_aboutUs()
+    {
+        $carousels = Slide::where('carousel_id', 2)->get();
+        dd($carousels);
+        return view('admin.carousel.carousel_aboutUs.index_aboutUs', compact('carousels'));
+    }
+
 
     public function create()
     {
         $carousels = Slide::all();
-        return view('admin.carousel.create', compact('carousels'));
+        return view('admin.carousel.carousel_home.create', compact('carousels'));
+    }
+    public function create_aboutUs()
+    {
+        $carousels = Slide::where('carousel_id', 2)->get();
+        dd($carousels);
+        return view('admin.carousel.carousel_aboutUs.create', compact('carousels'));
     }
 
     public function store(Request $request)
@@ -48,7 +61,8 @@ class SlideController extends Controller
 
             return redirect('/carousel');
         }
-        else if($carousel && $carousel->name === 'aboutUs'){
+        $carousel = Carousel::find(2);
+        if($carousel && $carousel->name === 'aboutUs'){
             $slide = new Slide($request->all());
             if ($request->hasFile('urlphoto')) {
                 $image = $request->file('urlphoto');
@@ -64,7 +78,7 @@ class SlideController extends Controller
 
             $carousel->slides()->save($slide);
 
-            return redirect('/carousel');
+            return redirect('/about');
 
         }
     }
@@ -102,7 +116,12 @@ class SlideController extends Controller
     public function edit($id)
     {
         $carousel = Slide::findOrFail($id);
-        return view('admin.carousel.edit', compact('carousel'));
+        return view('admin.carousel.carousel_home.edit', compact('carousel'));
+    }
+    public function edit_aboutUs($id)
+    {
+        $carousel = Slide::findOrFail($id);
+        return view('admin.carousel.carousel_aboutUs.edit_aboutUs', compact('carousel'));
     }
 
     public function destroy($id)

@@ -6,7 +6,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\Admin\CarouselController;
 use App\Http\Controllers\Admin\SettingController;
-use App\Http\Controllers\Admin\SlideController;
+use App\Http\Controllers\Admin\CarouselHomeController;
+use App\Http\Controllers\Admin\CarouselAboutUsController;
+use App\Http\Controllers\Admin\CarouselOpinionController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -66,6 +68,8 @@ use Illuminate\Support\Facades\Route;
     });
     Route::get('/', [CarouselController::class, 'mainCarousel'])->name('/');
     Route::get('/home', [CarouselController::class, 'mainCarousel'])->name('home');
+    Route::get('/about', [CarouselController::class, 'aboutUsCarousel'])->name('about');
+    Route::get('/motivation', [CarouselController::class, 'opinionsCarousel'])->name('motivacion');
     Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
     Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
 
@@ -78,7 +82,9 @@ use Illuminate\Support\Facades\Route;
         Route::get('/admin', [ServiceRequestsController::class, 'messageReport'])->name('admin');
         Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
         Route::resource('/setting', SettingController::class);
-        Route::resource('/carousel', SlideController::class);
+        Route::resource('/carousel', CarouselHomeController::class);
+        Route::resource('/aboutUs_carousel', CarouselAboutUsController::class);
+        Route::resource('/opinions_carousel', CarouselOpinionController::class);
         Route::get('/profile', [MenuController::class, 'loadMenu'])->name('profile');
         Route::post('logout', [LoginController::class, 'logout']);
     });

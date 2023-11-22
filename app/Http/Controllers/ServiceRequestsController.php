@@ -25,13 +25,13 @@ class ServiceRequestsController extends Controller
         $service_requests->time = $request->time;
         $service_requests->state = "sent";
         $service_requests->save();
-       
+
         return redirect()->route('service')->with('register', 'ok');
-    } 
+    }
     public function messageReport()
     {
         $show_messages = ServiceRequests::all();
-        return view('layouts.main', compact('show_messages'));
+        return view('admin', compact('show_messages'));
     }
     public function show($id)
     {

@@ -5,18 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Carousel extends Model
+class CarouselAboutUs extends Model
 {
     use HasFactory;
-   /* protected $table = 'carousels';
-
     protected $fillable = [
-        'name',
+        'title',
+        'description',
+        'url_photo',
+        'order',
     ];
-
-    public function slides()
-    {
-        return $this->hasMany(Slide::class);
-    }*/
-
 }

@@ -48,8 +48,8 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pantallas</h6>
             <a class="collapse-item" href="/carousel">Inicio</a>
-            <a class="collapse-item" href="login.html">Nosotros</a>
-            <a class="collapse-item" href="register.html">Procesos</a>
+            <a class="collapse-item" href="/aboutUs_carousel">Nosotros</a>
+            <a class="collapse-item" href="/opinions_carousel">Procesos</a>
             <a class="collapse-item" href="register.html">Contáctenos</a>
             <a class="collapse-item" href="forgot-password.html">Pie de página</a>
             <div class="collapse-divider"></div>
