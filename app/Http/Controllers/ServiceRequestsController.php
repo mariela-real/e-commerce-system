@@ -28,10 +28,15 @@ class ServiceRequestsController extends Controller
 
         return redirect()->route('service')->with('register', 'ok');
     }
-    public function messageReport()
+   /* public function messageReport()
     {
         $show_messages = ServiceRequests::all();
         return view('admin', compact('show_messages'));
+    }*/
+    public function messageReport()
+    {
+        $show_messages = ServiceRequests::all();
+        return view('contact.notifications', compact('show_messages'));
     }
     public function show($id)
     {

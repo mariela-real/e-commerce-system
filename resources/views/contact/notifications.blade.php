@@ -1,3 +1,5 @@
+@extends('layouts.main')
+@section('content')
 <link rel="stylesheet" href="{{asset('css/message_box.css')}}" />
 
 <div>
@@ -14,22 +16,23 @@
             <td>{{$show_message->firstname . ' ' . $show_message->lastname}}</td>
             <td>{{$show_message->subject}}</td>
             <td>{{$show_message->created_at}}</td>
-            </tr> 
+            </tr>
             @endforeach
         </tbody>
     </table>
 </div>
+@endsection
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   @yield('js')
   <script>
-    $(function () {$('table.table tr').click(function () 
-      {  
+    $(function () {$('table.table tr').click(function ()
+      {
       if( $(this).data('url')!=null)
       {
         window.location.href = $(this).data('url');
       }
        });
-    }) 
+    })
   </script>
 <script>
   var menu=document.getElementsByClassName("nav-link");
@@ -57,5 +60,5 @@
 <script>
  var received=document.getElementById("received")
  var sent=document.getElementById("sent")
- received.style.background="grey" 
+ received.style.background="grey"
 </script>

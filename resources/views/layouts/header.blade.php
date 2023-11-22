@@ -9,24 +9,11 @@
 
     <!-- Nav Item - Alerts -->
     <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="{{ route('notifications') }}" id="alertsDropdown" role="button" >
             <i class="fas fa-bell fa-fw"></i>
             <!-- Counter - Alerts -->
             <span class="badge badge-danger badge-counter">3+</span>
         </a>
-        <!-- Menú desplegable - Alertas -->
-        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-            aria-labelledby="alertsDropdown">
-
-            <a href="admin">
-            <h6 class="dropdown-header">
-                Notificaciones
-            </h6>
-            </a>
-            @include('contact.notifications')
-            <a class="dropdown-item text-center small text-gray-500" href="#">Mostrar todos</a>
-        </div>
     </li>
 
     <div class="topbar-divider d-none d-sm-block"></div>

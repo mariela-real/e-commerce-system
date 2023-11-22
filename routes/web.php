@@ -79,7 +79,9 @@ use Illuminate\Support\Facades\Route;
     Route::post('login', [LoginController::class, 'authenticate']);
     });
     Route::middleware(['auth'])->group(function () {
-        Route::get('/admin', [ServiceRequestsController::class, 'messageReport'])->name('admin');
+
+      Route::get('/admin', function(){return view('admin');});
+      Route::get('/notifications', [ServiceRequestsController::class, 'messageReport'])->name('notifications');
         Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
         Route::resource('/setting', SettingController::class);
         Route::resource('/carousel', CarouselHomeController::class);
