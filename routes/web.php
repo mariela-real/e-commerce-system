@@ -22,18 +22,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-    Route::get('/', function () {
-        return view('home.home');
-    });
-
-    Route::get('/about', function () {
-        return view('about.about');
-    });
-
-    Route::get('/motivation', function () {
-        return view('motivation.motivation');
-    });
-
     Route::get('/mission', function () {
         return view('mission_vision.mission_vision');
     });
@@ -66,6 +54,10 @@ use Illuminate\Support\Facades\Route;
     Route::get('/fecha', function(){
         return view('inbox.reply_message');
     });
+    Route::get('/navbar', function(){
+        return view('admin.navbar');
+    });
+    /* ------------------------------------RUTAS EXTERNAS-------------------------------------------------- */
     Route::get('/', [CarouselController::class, 'mainCarousel'])->name('/');
     Route::get('/home', [CarouselController::class, 'mainCarousel'])->name('home');
     Route::get('/about', [CarouselController::class, 'aboutUsCarousel'])->name('about');
@@ -73,15 +65,15 @@ use Illuminate\Support\Facades\Route;
     Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
     Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
 
-
+  /* ------------------------------------RUTAS CON AUTENTICACION------------------------------------------ */
     Route::middleware(['guest'])->group(function () {
     Route::get('/login', function () { return view('auth.login'); })->name('login');
     Route::post('login', [LoginController::class, 'authenticate']);
     });
+  /* ------------------------------------RUTAS CON INICIO DE SESION---------------------------------------- */
     Route::middleware(['auth'])->group(function () {
-
-      Route::get('/admin', function(){return view('admin');});
-      Route::get('/notifications', [ServiceRequestsController::class, 'messageReport'])->name('notifications');
+        Route::get('/admin', function(){return view('admin');});
+        Route::get('/notifications', [ServiceRequestsController::class, 'messageReport'])->name('notifications');
         Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
         Route::resource('/setting', SettingController::class);
         Route::resource('/carousel', CarouselHomeController::class);
