@@ -39,6 +39,8 @@
 
                 <!-- Topbar -->
                 @include('layouts.header')
+
+
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -46,7 +48,6 @@
                 @yield('content')
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
 
