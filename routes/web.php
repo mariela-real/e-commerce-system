@@ -81,4 +81,8 @@ use Illuminate\Support\Facades\Route;
         Route::resource('/opinions_carousel', CarouselOpinionController::class);
         Route::get('/profile', [MenuController::class, 'loadMenu'])->name('profile');
         Route::post('logout', [LoginController::class, 'logout']);
+
+        Route::get('/config', function(){
+            return view('admin.carousel.carousel_aboutUs.page');
+        });
     });
