@@ -10,6 +10,6 @@ class MenuController extends Controller
     public function loadMenu(Request $request)
     {
         $user = Auth::user();
-        return view('auth.profile.index',compact('user'));
+        return view('admin',compact('user'));
     }
 }
