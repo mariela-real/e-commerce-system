@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <title></title>
     <link rel="stylesheet" href="{{asset('css/incubation.css')}}">
 </head>
 <body>
     <!-- content__Incubation controla toda la pagina de  encubacion-->
     <div class="content__Incubation">
-        
+
         <!-- incubation_title controla un div diseñado para el titulo, linea blanca y el texto-->
         <div class="incubation_title">
             <div class="line"></div>
@@ -28,8 +28,8 @@
             </p>
         </div>
         <!-- incubation__logo controla la parte del logo de la pagina-->
-        <div class="incubation__logo"> 
-            <img src="{{asset('img/preIncubacion.jpg')}}" alt="">           
+        <div class="incubation__logo">
+            <img src="{{asset('img/preIncubacion.jpg')}}" alt="">
         </div>
     </div>
 
@@ -51,10 +51,10 @@
                 <h3>Evaluación del desarrollo empresarial</h3>
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
-            
+
         </div>
-        
-        
+
+
         <div class="textos">
             <div class="texto">Se realizarán talleres con los
                 emprendedores para generar un programa de actividades para realizar
@@ -69,7 +69,7 @@
                 donde se realizará reforzamientos de estrategias en caso de ser
                 necesario.
                 </div>
-            
+
         </div>
     </div>
 
@@ -86,7 +86,7 @@
             </div>
             <div class="item  ">
                 <h3>Escalonamiento empresarial<i class="fa-solid fa-angle-right"></i> </h3>
-                
+
                 <div class="textos">
                     <div class="texto">herramientas que ayuda al emprendedor
                         a identificar el crecimiento y desarrollo empresarial, se lo realiza
@@ -95,7 +95,7 @@
             </div>
             <div class="item">
                 <h3>Acompañamiento empresarial<i class="fa-solid fa-angle-right"></i> </h3>
-                
+
                 <div class="textos">
                     <div class="texto">Asesoramiento investigativo, técnico de
                         la unidad.</div>
@@ -103,7 +103,7 @@
             </div>
             <div class="item">
                 <h3>Evaluación del desarrollo empresarial <i class="fa-solid fa-angle-right"></i></h3>
-                
+
                 <div class="textos">
                     <div class="texto">Cada semestre de deberá
                         realizar una evaluación a cada emprendedor de los alcances obtenidos
@@ -112,22 +112,22 @@
                         </div>
                 </div>
             </div>
-            
-         
-            
+
+
+
         </div>
-        
-        
-       
+
+
+
     </div>
 
 
     <script type="text/javascript" src="{{asset('js/incubation.js')}}"></script>
-    @include('footer.footer')
+
 </body>
 
 
 
-   
+
 </html>
 @endsection

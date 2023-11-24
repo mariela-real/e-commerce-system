@@ -11,12 +11,12 @@ class CarouselAboutUsController extends Controller
     public function index()
     {
         $carousels = CarouselAboutUs::all();
-        return view('admin.carousel.carousel_aboutUs.index', compact('carousels'));
+        return view('admin.about_us.carousel_aboutUs.index',  ['carousels' => $carousels]);
     }
 
     public function create()
     {
-        return view('admin.carousel.carousel_aboutUs.create');
+        return view('admin.about_us.carousel_aboutUs.create');
     }
 
     public function store(Request $request)
@@ -74,7 +74,7 @@ class CarouselAboutUsController extends Controller
     public function edit($id)
     {
         $carousel = CarouselAboutUs::findOrfail($id);
-	    return view('admin.carousel.carousel_aboutUs.edit', compact('carousel'));
+	    return view('admin.about_us.carousel_aboutUs.edit', compact('carousel'));
     }
 
 

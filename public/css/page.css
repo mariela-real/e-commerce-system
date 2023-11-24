@@ -6,9 +6,9 @@
 
 .content_page {
     display: none;
-    
-    
-    margin: 40px;
+
+
+    margin: 35px;
   }
 
   .content_page.active {
@@ -19,16 +19,16 @@
     margin: 0px;
     width: 100%;
     height: 100%;
-    background-color: #ffffff; 
-    color: rgb(0, 0, 0);
-    border: 1px solid rgba(0, 0, 0, 0.745);
+    background-color: #ffffff;
+    color: rgb(66, 66, 66);
+    border: 1px solid rgba(87, 86, 86, 0.4);
     padding: 10px 15px;
-    cursor: pointer;   
-    font-size: 20px; 
+    cursor: pointer;
+    font-size: 20px;
   }
 
   .page_header button.active {
-    background-color: rgb(68, 245, 212);
+    background-color: rgb(29, 165, 140);
     color: white;
   }
 
@@ -37,9 +37,12 @@
     flex-direction: row;
     width: 100%;
 }
+.button-margin {
+    margin-left: 10px;
+}
 
 @media (max-width: 672px){
-    .page_header button {  
-        font-size: 3vw; 
+    .page_header button {
+        font-size: 3vw;
       }
 }

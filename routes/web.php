@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\CarouselHomeController;
 use App\Http\Controllers\Admin\CarouselAboutUsController;
 use App\Http\Controllers\Admin\CarouselOpinionController;
+use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\WorkController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,13 +28,6 @@ use Illuminate\Support\Facades\Route;
         return view('mission_vision.mission_vision');
     });
 
-    Route::get('/team', function () {
-        return view('team.team');
-    });
-    Route::get('/work', function () {
-        return view('work.work');
-    });
-
     Route::get('/pre_incubation', function () {
         return view('pre_incubation.pre_incubation');
     });
@@ -48,9 +43,6 @@ use Illuminate\Support\Facades\Route;
     Route::get('/service', function () {
         return view('contact.advice');
     });
-    Route::get('/inbox', function () {
-        return view('contact.notifications');
-    });
     Route::get('/fecha', function(){
         return view('inbox.reply_message');
     });
@@ -62,10 +54,12 @@ use Illuminate\Support\Facades\Route;
     Route::get('/home', [CarouselController::class, 'mainCarousel'])->name('home');
     Route::get('/about', [CarouselController::class, 'aboutUsCarousel'])->name('about');
     Route::get('/motivation', [CarouselController::class, 'opinionsCarousel'])->name('motivacion');
+    Route::get('/team', [TeamController::class, 'showTeam'])->name('team');
     Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
+    Route::get('/work', [WorkController::class, 'showWork'])->name('work');
     Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
 
-  /* ------------------------------------RUTAS CON AUTENTICACION------------------------------------------ */
+  /* ------------------------------------RUTAS DE AUTENTICACION------------------------------------------ */
     Route::middleware(['guest'])->group(function () {
     Route::get('/login', function () { return view('auth.login'); })->name('login');
     Route::post('login', [LoginController::class, 'authenticate']);
@@ -77,12 +71,14 @@ use Illuminate\Support\Facades\Route;
         Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
         Route::resource('/setting', SettingController::class);
         Route::resource('/carousel', CarouselHomeController::class);
+    /* ------------------------------------RUTAS "A cerca de nosotros"------------------------------------- */
+        Route::get('/about_us', function(){return view('admin.about_us.index'); });
         Route::resource('/aboutUs_carousel', CarouselAboutUsController::class);
+        Route::resource('/team_profile', TeamController::class);
+        Route::resource('/how_to_work', WorkController::class);
+
         Route::resource('/opinions_carousel', CarouselOpinionController::class);
         Route::get('/profile', [MenuController::class, 'loadMenu'])->name('profile');
         Route::post('logout', [LoginController::class, 'logout']);
 
-        Route::get('/config', function(){
-            return view('admin.carousel.carousel_aboutUs.page');
-        });
     });

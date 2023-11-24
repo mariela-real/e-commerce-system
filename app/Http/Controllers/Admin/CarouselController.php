@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\CarouselHome;
 use App\Models\CarouselAboutUs;
 use App\Models\CarouselOpinion;
+use App\Models\Team;
 class CarouselController extends Controller
 {
 
@@ -21,5 +22,9 @@ class CarouselController extends Controller
     public function opinionsCarousel(){
         $carousel = CarouselOpinion::orderBy('order','asc')->get();
         return view('motivation.motivation', compact('carousel'));
+    }
+    public function CarouselHome(){
+        $carousel = CarouselHome::orderBy('order','asc')->get();
+        return view('admin.page_aboutUs', compact('carousel'));
     }
 }
